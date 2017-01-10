@@ -2,6 +2,7 @@
 layout: post
 title:  "Detecting Emojis in a String by State Machine"
 date:   2017-01-04 01:02:58 +0530
+comments: true
 categories: java state-machine regex
 ---
 
