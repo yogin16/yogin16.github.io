@@ -4,11 +4,12 @@ title:      "Detecting Emojis in a String by a State Machine"
 date:       2017-01-04 01:02:58 +0530
 comments:   true
 categories: java automata
+excerpt:    Detecting Emojis is not as simple problem as just checking if any particular emoji is present in the text that we can do by contains check. So here is EmoticonDetector in java.
 ---
 
 The message texts on social media contain emojis most of the time. And these emojis help identify the emotions and sentiment conveyed in the message. Not only to identify the sentiment we need to extract emojis from the text but to replace the emoji's symbol with actual emoji's gif or png (image) we need to detect the emoji symbols present in a given string.
 
-Detecting Emojis is not as simple problem as just checking if any particular emoji is present in the text. That we can do by contains check. So I created [EmoticonDetector][emoticon-detector] in java.
+Detecting Emojis is not as simple problem as just checking if any particular emoji is present in the text that we can do by contains check. So I created [EmoticonDetector][emoticon-detector] in java.
 
 The usage is simple. We have set of emoji symbols we need to detect. We construct EmoticonDetector for those emojis. And we can use the detector to fet the emoji details.
 
