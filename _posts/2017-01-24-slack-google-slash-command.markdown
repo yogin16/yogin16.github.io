@@ -9,9 +9,10 @@ I love Slack. I feel it is a great product. [The company strives for best produc
 This was first interaction playing with Node and Heroku. and I became fan of both. Here is how I added web search slash command in two days for Slack.
 
 ### Setting up the server
-The first thing needed was the server. Server which would listen to the webhook requests from Slack and perform google search. I explored Node's express.js framework to create [server](https://github.com/yogin16/slack-google) with Node's Google kit.
-Once the server was ready, deploying and hosting it on Heroku was easier than expected. just needed to connect Heroku with Github and some commands here and there and the server was ready. Heroku has great UI as well as CLI support along with great documents.
+The first thing needed was the server. Server which would listen to the webhook requests from Slack and perform google search. I explored Node's [express.js](http://expressjs.com/) framework to create [server](https://github.com/yogin16/slack-google) with Node's [Google](https://www.npmjs.com/package/google) kit.
+Once the server was ready, deploying and hosting it on Heroku was easier than expected. Just needed to connect Heroku with Github and some commands here and there and the server was ready. Heroku has great UI as well as CLI support along with great documents.
 
+Server hosted.
 ![server hosted](../_assets/images/heroku_dashboard.png)
 
 It is hosted on [https://google-slack.herokuapp.com/](https://google-slack.herokuapp.com/)
@@ -20,7 +21,9 @@ It is hosted on [https://google-slack.herokuapp.com/](https://google-slack.herok
 As Slack allows us to add custom integrations and leverage power of adding own slash commands very easily, the next step was not very time consuming.
 Just have to add the slash command configuration - it asks for **command name**, **the server url**, **description**
 
+Slash command added.
 ![slash command added](../_assets/images/slack_slash_command.png)
 
 ### It works!
+We can do google search directly from Slack.
 ![We can search google directly from Slack.](../_assets/images/slack_google_search.png)
