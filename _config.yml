@@ -17,7 +17,7 @@ title: yogin16
 email: yogin.daiict@gmail.com
 description: > # hi, I am yogin patel. I work mostly on java.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "http://yogin16.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: yogin16
 github_username:  yogin16
 

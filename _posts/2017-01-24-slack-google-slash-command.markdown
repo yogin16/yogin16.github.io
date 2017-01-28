@@ -13,7 +13,7 @@ The first thing needed was the server. Server which would listen to the webhook 
 Once the server was ready, deploying and hosting it on Heroku was easier than expected. Just needed to connect Heroku with Github and some commands here and there and the server was ready. Heroku has great UI as well as CLI support along with great documents.
 
 Server hosted.
-![server hosted](../_assets/images/heroku_dashboard.png)
+![server hosted]({{ site.url }}assets/images/heroku_dashboard.png)
 
 It is hosted on [https://google-slack.herokuapp.com/](https://google-slack.herokuapp.com/)
 
@@ -22,8 +22,8 @@ As Slack allows us to add custom integrations and leverage power of adding own s
 Just have to add the slash command configuration - it asks for **command name**, **the server url**, **description**
 
 Slash command added.
-![slash command added](../_assets/images/slack_slash_command.png)
+![slash command added]({{ site.url }}assets/images/slack_slash_command.png)
 
 ### It works!
 We can do google search directly from Slack.
-![We can search google directly from Slack.](../_assets/images/slack_google_search.png)
+![We can search google directly from Slack.]({{ site.url }}assets/images/slack_google_search.png)
