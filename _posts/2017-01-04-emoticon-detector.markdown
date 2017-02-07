@@ -43,6 +43,6 @@ The EmoticonDetector is similar to creating a regex for matching `emojisToDetect
 
 State machine is dynamically created. We first figure out the _character set_ we would need to create state machine. We also need to label all _states_ we would need for given input set. One we have the _character set_ and _states_ identified we are good to create _transition map,_ that is the definition with each state with information for what would be the next state for each input char. Typical automata stuff.
 
-This state machine would help to identify all the emoticons present in the text in only one iteration.
+This state machine would help to identify all the emoticons present in the text in **only one iteration.**
 
 [emoticon-detector]:https://github.com/yogin16/emoticon-detect
