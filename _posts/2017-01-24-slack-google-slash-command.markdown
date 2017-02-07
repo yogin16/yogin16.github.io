@@ -4,14 +4,14 @@ title:      "Creating Slack slash command for Google search using Node and Herok
 date:       2017-01-24 12:34:58 +0530
 comments:   true
 ---
-I love Slack. I feel it is a great product. [The company strives for best product](https://slack.engineering/data-wrangling-at-slack-f2e0ff633b69#.qxhj9rsjh). And I love Google, as everyone does. So I decided to add google search within Slack.
+I love [Slack](https://slack.com/). I feel it is a great product. [The company strives for best product](https://slack.engineering/data-wrangling-at-slack-f2e0ff633b69#.qxhj9rsjh). And I love [Google](https://www.google.co.in/search?q=Rudy), as everyone does. So I decided to add google search within Slack.
 
 This was first interaction playing with Node and Heroku. and I became fan of both. Here is how I added web search slash command in two days for Slack.
 
 ### Setting up the server
 The first thing needed was the server. Server which would listen to the webhook requests from Slack and perform google search, give the search results back. NPM has [Google](https://www.npmjs.com/package/google) kit. So I was hoping to use that and deploy the Node server. I explored Node's [express.js](http://expressjs.com/) framework to create [server](https://github.com/yogin16/slack-google).
 
-1. Setting up [express.js](http://expressjs.com/en/starter/installing.html) repo.
+- Setting up [express.js](http://expressjs.com/en/starter/installing.html) repo.
 
 ```bash
 $ mkdir slack-google
@@ -21,14 +21,14 @@ $ npm init
 $ npm install express --save
 ```
 
-2. Get additional libs that we would require
+- Get additional libs that we would require
 
 ```bash
 $ npm install google
 $ npm install lodash
 ```
 
-3. Add app.js and define routes (Equivalent to adding a servlet as I am coming from Java world)
+- Add app.js and define routes (Equivalent to adding a servlet if coming from Java world like me)
 
 ```javascript
 var express = require('express');
