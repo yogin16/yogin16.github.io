@@ -23,6 +23,13 @@ github_username:  yogin16
 
 # Build settings
 markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+highlighter:      rouge
+permalink:        pretty
+
 theme: minima
 gems:
   - jekyll-feed
