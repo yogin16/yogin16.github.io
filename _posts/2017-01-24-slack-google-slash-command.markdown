@@ -12,6 +12,7 @@ This was first interaction playing with Node and Heroku. and I became fan of bot
 The first thing needed was the server. Server which would listen to the webhook requests from Slack and perform google search, give the search results back. NPM has [Google](https://www.npmjs.com/package/google) kit. So I was hoping to use that and deploy the Node server. I explored Node's [express.js](http://expressjs.com/) framework to create [server](https://github.com/yogin16/slack-google).
 
 1. Setting up [express.js](http://expressjs.com/en/starter/installing.html) repo.
+
 ```bash
 $ mkdir slack-google
 $ cd slack-google
@@ -21,12 +22,14 @@ $ npm install express --save
 ```
 
 2. Get additional libs that we would require
+
 ```bash
 $ npm install google
 $ npm install lodash
 ```
 
 3. Add app.js and define routes (Equivalent to adding a servlet as I am coming from Java world)
+
 ```javascript
 var express = require('express');
 var google = require('google');
@@ -56,6 +59,7 @@ One common problem I faced while setting up Heroku - it would not serve the requ
 
 - Heroku need to know the start up command for the server process. Need to add `Procfile`. It contains the instruction to run commands on deployment. our content is: `web: node app.js` as we have node server.
 - The app is not going to be hosted on 3000 port. the common http port is 80 and https is 443. Changing `app.listen` to as:
+
 ```javascript
 var PORT = process.env.PORT || 3000;
 app.listen(3000, function () {
