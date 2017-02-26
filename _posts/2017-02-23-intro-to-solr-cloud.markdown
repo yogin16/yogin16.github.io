@@ -5,7 +5,7 @@ date:       2017-02-23 12:34:58 +0530
 comments:   true
 ---
 # Solr Search Engine
-[Solr](http://lucene.apache.org/solr/) is a well known search engine which launched [SolrCloud](https://cwiki.apache.org/confluence/display/solr/SolrCloud) to deploy and maintain solr on cluster. As distributed application with scale requires multiple solr nodes, this is a big upgrade in solr clustering. 
+[Solr](http://lucene.apache.org/solr/) is a well known search engine which launched [SolrCloud](https://cwiki.apache.org/confluence/display/solr/SolrCloud) to deploy and maintain solr on cluster. As distributed application with scale requires multiple solr nodes, this is a big upgrade in solr clustering.
 
 Before Solr 4.x the application had to setup and maintain nodes with cores of shards and replica, in order to maintain a search engine which is **robust**, **highly available**, **scalable** both vertically & horizontally and easily **recoverable**.
 
@@ -42,12 +42,12 @@ Every index in SolrCloud is now called Collection. One index represents one coll
 #### Jargon in SolrCloud
  The conceptual Jargon used in SolrCloud with their hierarchy:
 
- Jargon | Detail | parameter
- ------------ | -------------------- | ----------
- Node | Physical machine. Scaling factor for cluster size. Each Node can host multiple Cores. | liveNodes
- Core | One core of the index. Set of records. A replica. Scaling factor for query per second | replicationFactor
- Shard | Set of cores. One Shard of the index. It can have multiple replica. Scaling factor for collection size. | numShards
- Collection | Set of shards. Represents one index. Abstraction level of interactions & configurations
+ | Jargon | Detail | parameter |
+ | ------------ | --------------------| ---------- |
+ | Node | Physical machine. Scaling factor for cluster size. Each Node can host multiple Cores. | liveNodes |
+ | Core | One core of the index. Set of records. A replica. Scaling factor for query per second | replicationFactor |
+ | Shard | Set of cores. One Shard of the index. It can have multiple replica. Scaling factor for collection size. | numShards |
+ | Collection | Set of shards. Represents one index. Abstraction level of interactions & configurations |
 
  SolrCloud has introduced [Collection APIs](https://cwiki.apache.org/confluence/display/solr/Collections+API) for creating index and managing the shards and its replicas. SolrCloud handles the hard job of distributing the cores to the appropriate nodes. The APIs makes it easy to configure the index in SolrCloud.
 
