@@ -46,9 +46,10 @@ Every index in SolrCloud is now called Collection. One index represents one coll
  | ------------ | --------------------| ---------- |
  | Node | Physical machine. Scaling factor for cluster size. Each Node can host multiple Cores. | liveNodes |
  | Core | One core of the index. Set of records. A replica. Scaling factor for query per second | replicationFactor |
- | Shard | Set of cores. One Shard of the index. It can have multiple replica. Scaling factor for collection size. | numShards |
+ | Shard | Set of cores. One shard of the index. It can have multiple replica. Scaling factor for collection size. | numShards |
  | Collection | Set of shards. Represents one index. Abstraction level of interactions & configurations |
 
+ 
  SolrCloud has introduced [Collection APIs](https://cwiki.apache.org/confluence/display/solr/Collections+API) for creating index and managing the shards and its replicas. SolrCloud handles the hard job of distributing the cores to the appropriate nodes. The APIs makes it easy to configure the index in SolrCloud.
 
 ### Distributed Requests
