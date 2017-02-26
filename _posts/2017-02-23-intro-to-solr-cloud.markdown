@@ -5,9 +5,11 @@ date:       2017-02-23 12:34:58 +0530
 comments:   true
 ---
 # Solr Search Engine
-[Solr](http://lucene.apache.org/solr/) is a well known search engine which launched [SolrCloud](https://cwiki.apache.org/confluence/display/solr/SolrCloud) to deploy and maintain solr on cluster. As distributed application with scale requires multiple solr nodes this is a big upgrade in solr clustering. Before Solr 4.x the application had to setup and maintain nodes with cores of shards and replica, in order to maintain a search engine which is **robust**, **highly available**, **scalable** both vertically & horizontally and easily **recoverable**.
+[Solr](http://lucene.apache.org/solr/) is a well known search engine which launched [SolrCloud](https://cwiki.apache.org/confluence/display/solr/SolrCloud) to deploy and maintain solr on cluster. As distributed application with scale requires multiple solr nodes, this is a big upgrade in solr clustering. 
 
-If there is any distributed application using Solr with multiple SolrCore; the legacy solr configuration, we should configure moving to SolrCloud.
+Before Solr 4.x the application had to setup and maintain nodes with cores of shards and replica, in order to maintain a search engine which is **robust**, **highly available**, **scalable** both vertically & horizontally and easily **recoverable**.
+
+If there is any distributed application using Solr with multiple SolrCore; the legacy solr configuration, we should consider moving to SolrCloud.
 
 ### Solr Clustering Before SolrCloud
 Before SolrCloud the clustering has to be taken care by the application. Typical solr architecture would look like:
