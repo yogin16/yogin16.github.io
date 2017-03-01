@@ -21,7 +21,7 @@ This is how you can add one collection having 2 shards and 2 replicas on 3 solr 
 From the ZK admin [doc](http://zookeeper.apache.org/doc/r3.4.6/zookeeperAdmin.html):
 > For the ZooKeeper service to be active, there must be a majority of non-failing machines that can communicate with each other. To create a deployment that can tolerate the failure of F machines, you should count on deploying 2xF+1 machines. Thus, a deployment that consists of three machines can handle one failure, and a deployment of five machines can handle two failures. Note that a deployment of six machines can only handle two failures since three machines is not a majority. For this reason, ZooKeeper deployments are usually made up of an odd number of machines.
 
-##### Install Zookeeper
+#### Install Zookeeper
 0. Three servers ready to launch zookeeper.
 1. Download latest Zookeeper from [their release page.](http://zookeeper.apache.org/releases.html#download). (We have used 3.4.6)
 2. Untar and put in a directory on all three servers. (e.g., `/mnt1/zookeeper-3.4.6`)
@@ -75,7 +75,7 @@ Using config: /mnt1/zookeeper-3.4.6/bin/../conf/zoo.cfg
 Mode: follower
 ```
 
-##### Setup Solr Cluster
+#### Setup Solr Cluster
 0. Three servers ready to launch solr.
 1. Download latest Zookeeper from [their release page.](http://lucene.apache.org/solr/downloads.html) (We have used 6.4.1)
 2. Untar and put in a directory on all three servers. (e.g., `/mnt1/solr-6.4.1`)
