@@ -77,7 +77,7 @@ Mode: follower
 
 ### Setup Solr Cluster
 0. Three servers ready to launch solr.
-1. Download latest Zookeeper from [their release page.](http://lucene.apache.org/solr/downloads.html) (We have used 6.4.1)
+1. Download latest Solr from [their release page.](http://lucene.apache.org/solr/downloads.html) (We have used 6.4.1)
 2. Untar and put in a directory on all three servers. (e.g., `/mnt1/solr-6.4.1`)
 3. The default SOLR_HOME is `/solr-6.4.1/server/solr` which will be picked up if there is no external solr home passed as argument while start command. This directory expects `solr.xml` file to be present. The default location already has one present which looks like following:
     ```xml
