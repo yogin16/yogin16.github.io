@@ -30,6 +30,8 @@ kramdown:
 highlighter:      rouge
 permalink:        pretty
 
+excerpt_separator: <!--more-->
+
 theme: minima
 gems:
   - jekyll-feed
