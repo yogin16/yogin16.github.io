@@ -7,6 +7,8 @@ comments:   true
 
 There was a question on [Reddit](https://www.reddit.com/r/AskReddit/comments/3jgqjl/what_is_your_favourite_educationalinformative/) about favorite YouTube channel and it came up with quite a list of channels. Few science, few aww, few on strange topics; very informative and geeky. Here is a list of few channels I am fan of personally, with no particular order.
 
+<!--more-->
+
 ### [Vsauce](https://www.youtube.com/user/Vsauce)
 I once mentioned Vsauce to a colleague on work and he had no idea about that. (the motivation to write this post). And he immediately became fan after watching one video.
 Math and Science videos with detailed research and explanation. [Micheal](https://en.wikipedia.org/wiki/Michael_Stevens_(educator)) there, always thanks you for watching those videos.
