@@ -13,13 +13,6 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: yogin16
-email: yogin.daiict@gmail.com
-description: > # hi, I am yogin patel. I work mostly on java.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://yogin16.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: yogin16
-github_username:  yogin16
 
 # Build settings
 markdown: kramdown
@@ -30,7 +23,13 @@ kramdown:
 highlighter:      rouge
 permalink:        pretty
 
-excerpt_separator: <!--more-->
+title: yogin16
+email: yogin.daiict@gmail.com
+description: > # hi, I am yogin patel. I work mostly on java.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://yogin16.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: yogin16
+github_username:  yogin16
 
 theme: minima
 gems:
