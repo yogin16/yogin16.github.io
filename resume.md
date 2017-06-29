@@ -38,6 +38,6 @@ Yogin Patel
 - Languages: Java, JavaScript, Erlang
 - Comfortable with UNIX operating systems and basic System Administration, with experience in tools and providers like AWS, Ansible, Jenkins
 - Working with distributed systems: Mesos, Qrtz, Kafka, Docker
-- Web: node.js, Git, svn, Glassfish
+- Web: node.js, Git, Glassfish
 - Databases and search engines: Mongo, ES, Solr, MySQL, Redis, Sqlite, Cassandra
 - Frameworks and Libraries: Spring, Guava, Gradle, ngnix
