@@ -14,7 +14,7 @@ Yogin Patel
 - Interested in operating systems, programing models, open source
 
 # Experience
-- Sprinklr, Associate Director (May 2017 - Present)
+- [Sprinklr](https://www.sprinklr.com/) , Associate Director (May 2017 - Present)
     - Developing and owning one more Sprinklr's core product line: Collaboration which features end to end encryption and real time communication, using Erlang's mqtt broker.
     - Engaging with customers and customer-facing teams with new feature requests and technical assistance on user experience issues.
     - Responsible for hiring and mentoring team, helping peers grow, delivering quality product, and ensuring code quality.
