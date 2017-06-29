@@ -36,7 +36,7 @@ Yogin Patel
 
 # Skill & Technologies
 - Languages: Java, JavaScript, Erlang
-- Very comfortable with UNIX operating systems and basic System Administration, with experience in tools and providers like AWS, Ansible, Jenkins
+- Comfortable with UNIX operating systems and basic System Administration, with experience in tools and providers like AWS, Ansible, Jenkins
 - Working with distributed systems: Mesos, Qrtz, Kafka, Docker
 - Web: node.js, Git, svn, Glassfish
 - Databases and search engines: Mongo, ES, Solr, MySQL, Redis, Sqlite, Cassandra
