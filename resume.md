@@ -15,7 +15,7 @@ Yogin Patel
 
 # Experience
 - [Sprinklr](https://www.sprinklr.com/), Associate Director (May 2017 - Present)
-    - Developing and owning one more Sprinklr's core product line: Collaboration which features end to end encryption and real time communication, using Erlang's mqtt broker.
+    - Developing and owning one more Sprinklr's core product line: Collaboration which features real time communication, using Erlang's mqtt broker.
     - Engaging with customers and customer-facing teams with new feature requests and technical assistance on user experience issues.
     - Responsible for hiring and mentoring team, helping peers grow, delivering quality product, and ensuring code quality.
 - Sprinklr, Senior Product Engineer (May 2015 – May 2017)
@@ -37,7 +37,7 @@ Yogin Patel
 # Skill & Technologies
 - Languages: Java, JavaScript, Erlang
 - Comfortable with UNIX operating systems and basic System Administration, with experience in tools and providers like AWS, Ansible, Jenkins
-- Working with distributed systems: Mesos, Qrtz, Kafka, Docker
+- Working with distributed systems: Mesos, Qrtz, Kafka, emqttd, Docker, ngnix
 - Web: node.js, Git, Glassfish
-- Databases and search engines: Mongo, ES, Solr, MySQL, Redis, Sqlite, Cassandra
-- Frameworks and Libraries: Spring, Guava, Gradle, ngnix
+- Databases and search engines: Mongo, ES, Solr, MySQL, Redis
+- Frameworks and Libraries: Spring, Guava, Gradle
