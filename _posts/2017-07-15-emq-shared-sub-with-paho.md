@@ -191,7 +191,7 @@ MqttClient client = new MqttClient();
 More details & source code for `SharedSubCallbackRouter` available on [https://github.com/yogin16/paho-shared-sub-example](http://www.hivemq.com/blog/mqtt-client-load-balancing-with-shared-subscriptions/)
 
 ### References:
-http://www.hivemq.com/blog/mqtt-client-load-balancing-with-shared-subscriptions/
-http://emqtt.io/docs/v2/advanced.html
-https://github.com/emqtt/emqttd/issues/639
-https://github.com/codeasone/shared-subscriptions-issue
+[http://www.hivemq.com/blog/mqtt-client-load-balancing-with-shared-subscriptions/](http://www.hivemq.com/blog/mqtt-client-load-balancing-with-shared-subscriptions/)
+[http://emqtt.io/docs/v2/advanced.html](http://emqtt.io/docs/v2/advanced.html)
+[https://github.com/emqtt/emqttd/issues/639](https://github.com/emqtt/emqttd/issues/639)
+[https://github.com/codeasone/shared-subscriptions-issue](https://github.com/codeasone/shared-subscriptions-issue)
