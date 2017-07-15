@@ -102,9 +102,9 @@ public class MqttSharedSubsTest {
 }
 ```
 
-The above code - is suppose to launch, `serverA`, `serverB` - which are shared subscribers to the same topic. and `testClientPublish` is publishing 100 test messages. serverA and serverB is expected to receive estimated half of these messages each.
+The above code - is suppose to launch, `serverA`, `serverB` - which are shared subscribers to the same topic. The `testClientPublish` is publishing 100 test messages. serverA and serverB is expected to receive estimated half of these messages each.
 
-Paho's mqtt client library matches topic client side before delivering the messages to the subscribed listeners. Problem comes when `MqttTopic.isMatched(topicFilter, topic)` doesn't allow the shared topic subscription to be matched. Luckily, `CommsRouter` has a generic callback for undelivered messages.
+Paho's mqtt client library matches topic client side before delivering the messages to the subscribed listeners. **Problem** comes when `MqttTopic.isMatched(topicFilter, topic)` doesn't allow the shared topic subscription to be matched. Luckily, `CommsRouter` has a generic callback for undelivered messages.
 Fixed above problem by changing the servers's subscription.
 
 ```java
@@ -182,9 +182,10 @@ MqttClient client = new MqttClient();
           //message received
         }
     });
+    //add more topics and listeners in the map.
 
     client.setCallback(new SharedSubCallbackRouter(listeners));
-    client.subscribe(sharedTopic);
+    client.subscribe(sharedTopic); //Subscribe all via listeners.keySet()
 ```
 
 More details on https://github.com/yogin16/paho-shared-sub-example
