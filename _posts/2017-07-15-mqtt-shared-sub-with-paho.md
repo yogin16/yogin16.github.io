@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "EMQ's shared subscriptions with Paho"
+title:      "MQTT shared subscriptions with Paho"
 date:       2017-07-15 11:43:58 +0530
 comments:   true
 ---
