@@ -23,27 +23,27 @@ Let say in our analyzer we want to use `Ngrams` for supporting search even when 
 #### create test index1
 ```
 curl -XPUT 'localhost:9200/test_ngram_1?pretty' -H 'Content-Type: application/json' -d '{
-"settings": {
-	"index": {
-		"analysis": {
-	"analyzer": {
-		"customNgram": {
-			"type": "custom",
-			"filter": "lowercase",
-			"tokenizer": "customNgram"
-		}
-	},
-	"tokenizer": {
-		"customNgram": {
-			"min_gram": "3",
-			"type": "edgeNGram",
-			"max_gram": "18",
-			"side": "front"
-		}
-	}
-}
-	}
-}
+    "settings": {
+        "index": {
+            "analysis": {
+                "analyzer": {
+                    "customNgram": {
+                        "type": "custom",
+                        "filter": "lowercase",
+                        "tokenizer": "customNgram"
+                    }
+                },
+                "tokenizer": {
+                    "customNgram": {
+                        "min_gram": "3",
+                        "type": "edgeNGram",
+                        "max_gram": "18",
+                        "side": "front"
+                    }
+                }
+            }
+        }
+    }
 }
 ```
 
@@ -54,58 +54,58 @@ This analyzer works well when you have search on something like `username` - whe
 #### analyze test index1
 ```
 curl -XPOST localhost:9200/test_ngram_1/_analyze -d '{
-   "analyzer": "spr_ngram",
-   "text": "Quick Fox"
-   }'
+    "analyzer": "spr_ngram",
+    "text": "Quick Fox"
+}'
 ```
 
 Result:
 
 ```
 {
-"tokens": [{
-	"token": "qui",
-	"start_offset": 0,
-	"end_offset": 3,
-	"type": "word",
-	"position": 0
-}, {
-	"token": "quic",
-	"start_offset": 0,
-	"end_offset": 4,
-	"type": "word",
-	"position": 1
-}, {
-	"token": "quick",
-	"start_offset": 0,
-	"end_offset": 5,
-	"type": "word",
-	"position": 2
-}, {
-	"token": "quick ",
-	"start_offset": 0,
-	"end_offset": 6,
-	"type": "word",
-	"position": 3
-}, {
-	"token": "quick f",
-	"start_offset": 0,
-	"end_offset": 7,
-	"type": "word",
-	"position": 4
-}, {
-	"token": "quick fo",
-	"start_offset": 0,
-	"end_offset": 8,
-	"type": "word",
-	"position": 5
-}, {
-	"token": "quick fox",
-	"start_offset": 0,
-	"end_offset": 9,
-	"type": "word",
-	"position": 6
-}]
+    "tokens": [{
+        "token": "qui",
+        "start_offset": 0,
+        "end_offset": 3,
+        "type": "word",
+        "position": 0
+    }, {
+        "token": "quic",
+        "start_offset": 0,
+        "end_offset": 4,
+        "type": "word",
+        "position": 1
+    }, {
+        "token": "quick",
+        "start_offset": 0,
+        "end_offset": 5,
+        "type": "word",
+        "position": 2
+    }, {
+        "token": "quick ",
+        "start_offset": 0,
+        "end_offset": 6,
+        "type": "word",
+        "position": 3
+    }, {
+        "token": "quick f",
+        "start_offset": 0,
+        "end_offset": 7,
+        "type": "word",
+        "position": 4
+    }, {
+        "token": "quick fo",
+        "start_offset": 0,
+        "end_offset": 8,
+        "type": "word",
+        "position": 5
+    }, {
+        "token": "quick fox",
+        "start_offset": 0,
+        "end_offset": 9,
+        "type": "word",
+        "position": 6
+    }]
 }
 ```
 
@@ -115,29 +115,28 @@ Lets fix that from what we know of using `filters`.
 
 #### create test index2:
 ```
-curl -XPUT 'localhost:9200/test_ngram_2?pretty' -H 'Content-Type: application/json' -d'
-{
-"settings": {
-	"index": {
-		"analysis": {
-			"analyzer": {
-				"customNgram": {
-					"type": "custom",
-					"tokenizer": "whitespace",
-					"filter": ["lowercase", "customNgram"]
-				}
-			},
-			"filter": {
-				"customNgram": {
-					"type": "edgeNgram",
-					"min_gram": "3",
-					"max_gram": "18",
-					"side": "front"
-				}
-			}
-		}
-	}
-}
+curl -XPUT 'localhost:9200/test_ngram_2?pretty' -H 'Content-Type: application/json' -d'{
+    "settings": {
+        "index": {
+            "analysis": {
+                "analyzer": {
+                    "customNgram": {
+                        "type": "custom",
+                        "tokenizer": "whitespace",
+                        "filter": ["lowercase", "customNgram"]
+                    }
+                },
+                "filter": {
+                    "customNgram": {
+                        "type": "edgeNgram",
+                        "min_gram": "3",
+                        "max_gram": "18",
+                        "side": "front"
+                    }
+                }
+            }
+        }
+    }
 }'
 ```
 
@@ -147,46 +146,46 @@ Now, our tokenizer is not ngram. our tokenizer is `whitespace`. The `ngram` is p
 
 ```
 curl -XPOST localhost:9200/test_ngram_2/_analyze -d '{
-"analyzer": "spr_ngram",
-"text": "Quick Fox"
+    "analyzer": "spr_ngram",
+    "text": "Quick Fox"
 }'
 ```
 
 Result:
 ```
 {
-"tokens": [{
-	"token": "qui",
-	"start_offset": 0,
-	"end_offset": 5,
-	"type": "word",
-	"position": 0
-}, {
-	"token": "quic",
-	"start_offset": 0,
-	"end_offset": 5,
-	"type": "word",
-	"position": 0
-}, {
-	"token": "quick",
-	"start_offset": 0,
-	"end_offset": 5,
-	"type": "word",
-	"position": 0
-}, {
-	"token": "fox",
-	"start_offset": 6,
-	"end_offset": 9,
-	"type": "word",
-	"position": 1
-}]
+    "tokens": [{
+        "token": "qui",
+        "start_offset": 0,
+        "end_offset": 5,
+        "type": "word",
+        "position": 0
+    }, {
+        "token": "quic",
+        "start_offset": 0,
+        "end_offset": 5,
+        "type": "word",
+        "position": 0
+    }, {
+        "token": "quick",
+        "start_offset": 0,
+        "end_offset": 5,
+        "type": "word",
+        "position": 0
+    }, {
+        "token": "fox",
+        "start_offset": 6,
+        "end_offset": 9,
+        "type": "word",
+        "position": 1
+    }]
 }
 ```
 
 This now qualifies when searching `fox`.
 
 ## References
-1. http://exploringelasticsearch.com/searching_usernames_and_tokenish_text.html
-1. https://www.elastic.co/guide/en/elasticsearch/reference/current/analyzer-anatomy.html
-1. https://www.elastic.co/guide/en/elasticsearch/reference/5.4/analysis-edgengram-tokenfilter.html#analysis-edgengram-tokenfilter
-1. https://www.elastic.co/blog/found-text-analysis-part-1
+1. [http://exploringelasticsearch.com/searching_usernames_and_tokenish_text.html](http://exploringelasticsearch.com/searching_usernames_and_tokenish_text.html)
+1. [https://www.elastic.co/guide/en/elasticsearch/reference/current/analyzer-anatomy.html](https://www.elastic.co/guide/en/elasticsearch/reference/current/analyzer-anatomy.html)
+1. [https://www.elastic.co/guide/en/elasticsearch/reference/5.4/analysis-edgengram-tokenfilter.html#analysis-edgengram-tokenfilter](https://www.elastic.co/guide/en/elasticsearch/reference/5.4/analysis-edgengram-tokenfilter.html#analysis-edgengram-tokenfilter)
+1. [https://www.elastic.co/blog/found-text-analysis-part-1](https://www.elastic.co/blog/found-text-analysis-part-1)
