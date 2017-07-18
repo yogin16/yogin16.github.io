@@ -24,7 +24,7 @@ This all sounds ok and basic, but can lead to mistakes in configuration. For exa
 Let say in our analyzer we want to use `Ngrams` for supporting search even when user enters incomplete word.
 
 #### create test index1
-```json
+```bash
 curl -XPUT 'localhost:9200/test_ngram_1?pretty' -H 'Content-Type: application/json' -d '{
     "settings": {
         "index": {
@@ -55,7 +55,7 @@ This reads as - it would tokenize with `edgeNGram` and lowecase them.
 This analyzer works well when you have search on something like `username` - where it is single token. But fails when you have to search on something like a message test, which is more like a sentence than a word.
 
 #### analyze test index1
-```json
+```bash
 curl -XPOST localhost:9200/test_ngram_1/_analyze -d '{
     "analyzer": "spr_ngram",
     "text": "Quick Fox"
@@ -64,7 +64,7 @@ curl -XPOST localhost:9200/test_ngram_1/_analyze -d '{
 
 Result:
 
-```javascript
+```json
 {
     "tokens": [{
         "token": "qui",
@@ -117,7 +117,7 @@ Notice: whenever someone search with `fox` this wouldn't qualify, as the tokens 
 Lets fix that from what we know of using `filters`.
 
 #### create test index2:
-```json
+```bash
 curl -XPUT 'localhost:9200/test_ngram_2?pretty' -H 'Content-Type: application/json' -d'{
     "settings": {
         "index": {
@@ -147,7 +147,7 @@ Now, our tokenizer is not ngram. our tokenizer is `whitespace`. The `ngram` is p
 
 #### analyze test index2
 
-```json
+```bash
 curl -XPOST localhost:9200/test_ngram_2/_analyze -d '{
     "analyzer": "spr_ngram",
     "text": "Quick Fox"
@@ -155,7 +155,7 @@ curl -XPOST localhost:9200/test_ngram_2/_analyze -d '{
 ```
 
 Result:
-```javascript
+```json
 {
     "tokens": [{
         "token": "qui",
