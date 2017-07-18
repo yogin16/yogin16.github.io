@@ -7,6 +7,7 @@ comments:   true
 I recently learned difference between `mapping` and `setting` in Elasticsearch. Which I wish I should have known earlier. Along the way I understood the need for `filter` and difference between `filter` and `tokenizer` in setting.
 
 Most of the time it is very important to get the mapping and setting of an index right before we are configuring or even start using ES. Which analyzers to use, which fields to index, how many shards; such questions have to be thought upon before we hit production with any ES index. An error here would cost more in term of re-indexing the data, or in-efficient use of memory or other resources.
+
 Elasticsearch has fairly detailed [documentation](https://www.elastic.co/guide/en/elasticsearch/guide/current/_index_settings.html) on everything and that explained that the index setting defines the configuration of the `index` and customises analyzers. And mapping is for the `type` and defines the schema and which of the analyzers to be used on a property.
 
 ## analysis
@@ -17,7 +18,9 @@ In index setting when we define [analysis](https://www.elastic.co/guide/en/elast
 ## filter vs tokenizer
 
 `filters` would apply **after** `tokenizer` on tokens. Classic example for the use case would be `lowecase` filter or `stop` filter to remove the terms which are in stop words, like `the`.
+
 This all sounds ok and basic, but can lead to mistakes in configuration. For example, taking, `NGram` tokenizer and filter example as explained in [this book](http://exploringelasticsearch.com/searching_usernames_and_tokenish_text.html) to support "search as you type" feature.
+
 Let say in our analyzer we want to use `Ngrams` for supporting search even when user enters incomplete word.
 
 #### create test index1
