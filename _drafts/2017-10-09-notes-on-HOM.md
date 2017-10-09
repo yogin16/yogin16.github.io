@@ -49,4 +49,4 @@ My boss recently gave me this book to read by [Andrew Grove](https://www.wikiwan
     - Mashlow's hierarchy of needs. (measure of achievement after money is awarded for higher needs)
     - Recognition of good work.
 
-- Structured, Task-oriented, telling how-to-on-each-tasks-managers' subordinates tends to show low maturity. Whereas the manager with characteristics of minimal involvement and who establish objectives and monitors the process tends to have subordinates with higher maturity.
+- Structured, Task-oriented, telling how-to-on-each-tasks-managers' subordinates tend to show low maturity. Whereas the managers with characteristics of minimal involvement and who establish objectives and monitors the process tend to have subordinates with higher maturity.
