@@ -45,7 +45,7 @@ My boss recently gave me this book to read by [Andrew Grove](https://www.wikiwan
 - Free market forces -> contractual obligations -> cultural values
 
 #### Training & Motiviation
-- How to motivate a person goea hand in hand on what they need.
+- How to motivate a person goes hand in hand on what they need.
     - Mashlow's hierarchy of needs. (measure of achievement after money is awarded for higher needs)
     - Recognition of good work.
 
