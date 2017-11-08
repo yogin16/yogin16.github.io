@@ -131,7 +131,7 @@ curl -XPUT 'localhost:9200/test_ngram_2?pretty' -H 'Content-Type: application/js
                 },
                 "filter": {
                     "customNgram": {
-                        "type": "edgeNgram",
+                        "type": "edgeNGram",
                         "min_gram": "3",
                         "max_gram": "18",
                         "side": "front"
