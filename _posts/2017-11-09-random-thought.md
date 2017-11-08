@@ -30,7 +30,8 @@ Jai:
 
 Yogin:
 > however even for 1M:
-![Infinity!]({{ site.url }}assets/images/oneMillionPixels.png)
+
+> ![Infinity!]({{ site.url }}assets/images/oneMillionPixels.png)
 
 Jai:
 > lol
