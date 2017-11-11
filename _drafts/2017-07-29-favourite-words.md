@@ -5,7 +5,7 @@ date:       2017-07-29 20:20:20 +0530
 comments:   true
 ---
 
-Words that says contains too much in themselves
+Words that says/contains too much in themselves.
 
 ## Limerence
 > Limerence (also infatuated love) is a state of mind which results from a romantic attraction to another person and typically includes obsessive thoughts and fantasies and a desire to form or maintain a relationship with the object of love and have one's feelings reciprocated.
@@ -18,4 +18,6 @@ Words that says contains too much in themselves
 ## Always
 > A word that was given true meaning by JK Rowling in the legendary book Harry Potter and the Deathly Hallows.
 
-##
+## Flipped
+> Because of the the movie Flipped. Some person are bigger than the sum of their individual parts.
+>> Turn over or cause to turn over with a sudden quick movement. You don't just fall in love. You flip.
