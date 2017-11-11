@@ -50,3 +50,6 @@ My boss recently gave me this book to read by [Andrew Grove](https://www.wikiwan
     - Recognition of good work.
 
 - Structured, Task-oriented, telling how-to-on-each-tasks-managers' subordinates tend to show low maturity. Whereas the managers with characteristics of minimal involvement and who establish objectives and monitors the process tend to have subordinates with higher maturity.
+
+## References:
+1. [High Output Management](https://www.goodreads.com/book/show/324750.High_Output_Management)
