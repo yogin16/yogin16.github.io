@@ -5,7 +5,7 @@ date:       2017-07-29 20:20:20 +0530
 comments:   true
 ---
 
-Words that says/contains too much in themselves.
+Words that say/contain too much in themselves.
 
 ## Limerence
 > Limerence (also infatuated love) is a state of mind which results from a romantic attraction to another person and typically includes obsessive thoughts and fantasies and a desire to form or maintain a relationship with the object of love and have one's feelings reciprocated.
