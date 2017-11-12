@@ -19,5 +19,5 @@ Words that say/contain too much in themselves.
 > A word that was given true meaning by JK Rowling in the legendary book Harry Potter and the Deathly Hallows.
 
 ## Flipped
-> Because of the the movie Flipped. Some person are bigger than the sum of their individual parts.
+> Because of the the movie Flipped. Some people are bigger than the sum of their individual parts.
 >> Turn over or cause to turn over with a sudden quick movement. You don't just fall in love. You flip.
