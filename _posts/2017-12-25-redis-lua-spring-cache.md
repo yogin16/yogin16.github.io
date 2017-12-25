@@ -5,7 +5,7 @@ date:       2017-12-25 20:04:20 +0530
 comments:   true
 ---
 
-Lua is an old programming language developed which motive to be embedded in other applications like Redis. The idea of lua script in redis in general is very useful. One can "cache" the script in redis server to execute series of instructions from just one EVAL command from client.
+[Lua](http://www.lua.org/manual/5.1/manual.html) is an old programming language developed which motive to be embedded in other applications like Redis. The idea of lua script in redis in general is very useful. One can "cache" the script in redis server to execute series of instructions from just one EVAL command from client.
 
 Redis lets us write scripted extensions and easy interface to manage the script. [This guide](https://www.compose.com/articles/a-quick-guide-to-redis-lua-scripting/) defines the basis of Lua scripting in Redis pretty neatly. I wanted to have a lua script for Redis to learn more about basic Lua itself. We use redis for Spring's `@Cacheable` cache mechanism. The usage is pretty simple on any @Component (Service) bean if we want to cache the result of the method we just annotate with:
 
@@ -59,3 +59,4 @@ Ability to add scripts in redis is a huge win in terms of efficiency and product
 1. https://redis.io/commands
 1. http://www.baeldung.com/spring-cache-tutorial
 1. http://blog.trifork.com/2015/02/09/active-cache-eviction-with-ehcache-and-spring-framework/
+1. http://www.lua.org/manual/5.1/manual.html
