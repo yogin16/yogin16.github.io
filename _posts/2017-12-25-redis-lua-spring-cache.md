@@ -9,7 +9,7 @@ comments:   true
 
 Redis lets us write scripted extensions and easy interface to manage the script. [This guide](https://www.compose.com/articles/a-quick-guide-to-redis-lua-scripting/) describes the basics of Lua scripting in Redis pretty neatly. I wanted to have a lua script for Redis to learn more about basic Lua itself.
 
-We use redis for Spring's `@Cacheable` cache mechanism. The usage is pretty simple on any @Component (Service) bean if we want to cache the result of the method we just annotate with:
+We use redis for Spring's `@Cacheable` cache mechanism. The usage is pretty simple; on any @Component (Service) bean if we want to cache the result of the method we just annotate with:
 
 ```java
     @Cacheable(value = "A_METHOD", key = "#param")
