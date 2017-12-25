@@ -19,7 +19,7 @@ We use redis for Spring's `@Cacheable` cache mechanism. The usage is pretty simp
     }
 ```
 
-To evict the cache we have `@CacheEvict` - for rest of the detail in the spring caching one can follow [this link](http://www.baeldung.com/spring-cache-tutorial).
+To evict the cache we have `@CacheEvict` - for more in the spring caching one can follow [this link](http://www.baeldung.com/spring-cache-tutorial).
 
 Goal in this post is to evict/clear the cache `A_METHOD` directly in redis. (Cases where we have changed the entry in the db directly and the `@CacheEvict` from spring was not called; making the redis cache stale)
 
