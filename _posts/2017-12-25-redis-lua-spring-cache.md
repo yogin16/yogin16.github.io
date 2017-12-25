@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "Clean Java's Spring's Redis Cache with a Lua script"
+title:      "Clean Spring's Redis Cache with a Lua script"
 date:       2017-12-25 20:04:20 +0530
 comments:   true
 ---
