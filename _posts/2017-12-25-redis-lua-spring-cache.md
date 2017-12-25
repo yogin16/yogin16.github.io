@@ -34,7 +34,7 @@ Based on our `@Cacheable` definition the zset name maintaining keys on the redis
     3) "param4"
 ```
 
-Each keys, in this case, `param1`, `param2`, `param4` are again redis keys of simple [set](https://redis.io/commands/set) . We can access Response for each keys by [get](https://redis.io/commands/get).
+Each keys, in this case, `param1`, `param2`, `param4` are again redis keys of simple [set](https://redis.io/commands/set) . We can access value for each keys by [get](https://redis.io/commands/get).
 We want to clear this cache.
 
 ### Clearing zset entries
