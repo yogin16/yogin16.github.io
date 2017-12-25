@@ -52,7 +52,7 @@ To execute the script we can use shell as this:
 $ ./redis-cli --eval cleanSpringRedisCache.lua A_METHOD
 ```
 
-Ability to add scripts in redis is a huge win in terms of efficiency and productivity. Multiple APIs for scripting provided by redis like `SCRIPT LOAD` and `EVALSHA` ensures that we don't have to upload the script to the server everytime we have to run it. And we can give multiple instruction or set of commands for redis in one script for doing bulk operations. We can also use many of existing Lua's libraries. That saves the need to for taking lot of Redis connections for each individual operations from clients and also network overhead.
+Ability to add scripts in redis is a huge win in terms of efficiency and productivity. Multiple APIs for scripting provided by redis like `SCRIPT LOAD` and `EVALSHA` ensures that we don't have to upload the script to the server every-time we have to run it. And we can give multiple instructions or set of commands for redis in one script for doing bulk operations. We can also use many of existing Lua's libraries. That saves the need to for taking lot of Redis connections for each individual operations from clients and also network overhead.
 
 ## References:
 1. https://www.redisgreen.net/blog/intro-to-lua-for-redis-programmers/
