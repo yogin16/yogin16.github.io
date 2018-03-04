@@ -82,10 +82,10 @@ http {
     server {
         listen 8090;
 
-	    location /myapp {
-		    default_type text/html;
-		    content_by_lua_file ./lua/myapp.lua;
-	    }
+	location /myapp {
+		default_type text/html;
+		content_by_lua_file ./lua/myapp.lua;
+	}
 }
 ```
 
