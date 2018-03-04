@@ -21,7 +21,7 @@ The name and greeting is compiled using a template from param. so the template l
 ```html
 <html>
 <body>
-    <p>Nice to see you {{param1}}. Platform greets you "{{param2}}".</p>
+    <p>Nice to see you \{{param1}}. Platform greets you "\{{param2}}".</p>
 </body>
 </html>
 ```
@@ -46,7 +46,7 @@ mkdir logs/ conf/ templates/ lua/
 ```html
 <html>
 <body>
-     <p>Nice to see you {{param1}}. Platform greets you "{{param2}}".</p>
+     <p>Nice to see you \{{param1}}. Platform greets you "\{{param2}}".</p>
 </body>
 </html>
 ```
