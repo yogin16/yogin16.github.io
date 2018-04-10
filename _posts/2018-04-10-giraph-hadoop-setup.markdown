@@ -5,14 +5,10 @@ date:       2018-04-10 01:02:58 +0530
 comments:   true
 ---
 
+We wanted to use http://giraph.apache.org/ for big graph analysis. As Giraph depends on Hadoop and HDFS, We need to setup hadoop cluster. and deploy Giraph.
+
 ### Introduction
-
-We want to use http://giraph.apache.org/ for influencer analysis
-
-It depends on Hadoop and HDFS.
-
-We need to setup hadoop cluster. and deploy giraph.
-the setup http://giraph.apache.org/quick_start.html explains for hadoop version 1. We are going to use version hadoop 2 - which doesnt have map reduce and it is replaced by yarn framework.
+The setup http://giraph.apache.org/quick_start.html explains for hadoop version 1. We are going to use version hadoop 2 - which doesnt have map reduce and it is replaced by yarn framework.
 
 ### Setup Hadoop
 For local hadoop yarn setup I followed (not followed with exact steps - there are some config props changed due to version):
