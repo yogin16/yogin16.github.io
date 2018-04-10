@@ -5,15 +5,15 @@ date:       2018-04-10 01:02:58 +0530
 comments:   true
 ---
 
-We wanted to use http://giraph.apache.org/ for big graph analysis. As Giraph depends on Hadoop and HDFS, We need to setup hadoop cluster. and deploy Giraph.
+We wanted to use [http://giraph.apache.org/](http://giraph.apache.org/) for big graph analysis. As Giraph depends on Hadoop and HDFS, We need to setup hadoop cluster. and deploy Giraph.
 
 ### Introduction
-The setup http://giraph.apache.org/quick_start.html explains for hadoop version 1. We are going to use version hadoop 2 - which doesnt have map reduce and it is replaced by yarn framework.
+The setup [http://giraph.apache.org/quick_start.html](http://giraph.apache.org/quick_start.html) explains for hadoop version 1. We are going to use version hadoop 2 - which doesnt have map reduce and it is replaced by yarn framework.
 
 ### Setup Hadoop
 For local hadoop yarn setup I followed (not followed with exact steps - there are some config props changed due to version):
 
-https://www.alexjf.net/blog/distributed-systems/hadoop-yarn-installation-definitive-guide/
+[https://www.alexjf.net/blog/distributed-systems/hadoop-yarn-installation-definitive-guide/](https://www.alexjf.net/blog/distributed-systems/hadoop-yarn-installation-definitive-guide/)
 
 These are the steps for single node cluster setup:
 
@@ -214,10 +214,10 @@ $ start-yarn.sh
 ```
 
 ### References:
-1. http://giraph.apache.org/quick_start.html
-1. https://www.alexjf.net/blog/distributed-systems/hadoop-yarn-installation-definitive-guide/
-1. https://hadoop.apache.org/docs/r2.7.1/hadoop-project-dist/hadoop-hdfs/hdfs-default.xml
-1. https://hadoop.apache.org/docs/current/hadoop-yarn/hadoop-yarn-common/yarn-default.xml
-1. https://stackoverflow.com/questions/48447198/calling-a-giraph-job-from-a-simple-java-program
-1. https://stackoverflow.com/questions/48515640/fatal-main-org-apache-hadoop-mapreduce-v2-app-mrappmaster-error-starting-mrap
-1. https://www.slideshare.net/rhatr/introduction-into-scalable-graph-analysis-with-apache-giraph-and-spark-graphx
+1. [http://giraph.apache.org/quick_start.html](http://giraph.apache.org/quick_start.html)
+1. [https://www.alexjf.net/blog/distributed-systems/hadoop-yarn-installation-definitive-guide/](https://www.alexjf.net/blog/distributed-systems/hadoop-yarn-installation-definitive-guide/)
+1. [https://hadoop.apache.org/docs/r2.7.1/hadoop-project-dist/hadoop-hdfs/hdfs-default.xml](https://hadoop.apache.org/docs/r2.7.1/hadoop-project-dist/hadoop-hdfs/hdfs-default.xml)
+1. [https://hadoop.apache.org/docs/current/hadoop-yarn/hadoop-yarn-common/yarn-default.xml](https://hadoop.apache.org/docs/current/hadoop-yarn/hadoop-yarn-common/yarn-default.xml)
+1. [https://stackoverflow.com/questions/48447198/calling-a-giraph-job-from-a-simple-java-program](https://stackoverflow.com/questions/48447198/calling-a-giraph-job-from-a-simple-java-program)
+1. [https://stackoverflow.com/questions/48515640/fatal-main-org-apache-hadoop-mapreduce-v2-app-mrappmaster-error-starting-mrap](https://stackoverflow.com/questions/48515640/fatal-main-org-apache-hadoop-mapreduce-v2-app-mrappmaster-error-starting-mrap)
+1. [https://www.slideshare.net/rhatr/introduction-into-scalable-graph-analysis-with-apache-giraph-and-spark-graphx](https://www.slideshare.net/rhatr/introduction-into-scalable-graph-analysis-with-apache-giraph-and-spark-graphx)
