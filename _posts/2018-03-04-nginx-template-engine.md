@@ -98,7 +98,7 @@ http {
 That should run the myapp server on 8090 port. And `curl http://localhost:3000/myapp?param1=hello&param2=John` should give the compiled HTML we wanted from our template.
 
 ### TL;DR
-Plain Nginx is fast and easy to configure. OpenResty gives enhances support on Nginx; in a way it is Nginx++. This gives power to program Nginx with lua scripting - which is also fast and easy. One can make Nginx compile templates, do access validation, auth verification all in Nginx itself, even when configuring it as reverse proxy for a webapp.
+Plain Nginx is fast and easy to configure. OpenResty gives enhanced support on Nginx; in a way it is Nginx++. This gives power to program Nginx with lua scripting - which is also fast and easy. One can make Nginx compile templates, do access validation, auth verification all in Nginx itself, even when configuring it as reverse proxy for a webapp.
 
 ### References:
 1. https://yos.io/2016/01/28/building-an-api-gateway-with-lua-and-nginx/
