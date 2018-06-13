@@ -17,7 +17,7 @@ EMQ's shared topic looks something like this:
 
 Shared subscriptions are useful in load balance.
 ```java
-package com.spr.core.testing;
+package com.example.testing;
 
 import org.apache.commons.io.IOUtils;
 import org.eclipse.paho.client.mqttv3.*;
