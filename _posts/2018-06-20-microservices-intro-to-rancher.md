@@ -17,7 +17,7 @@ It is easy to understand why Docker adoption is high. It gives:
 At the end, it is a just software we are shipping, it is computer resources we are using, it is services we are deploying(read: hosting). The app needs to customised and business specific; not deployment.
 
 ### Microservices have their benefits (if we can ignore the cons)
-- Scaling is replicating monolith if not microservice; so as far as this post is concerned, this is enough of a benefit to adapt microservices wherever we can; now that we have containers to ship them.
+- Scaling is replicating monolith if not microservice; as far as this post is concerned, this is enough of a benefit to adapt microservices wherever we can, now that we have containers to ship them.
 
 ### What a microservice wants
 Any service wants itself to be served, so is a microservice. It wants to be called/accessible. That asks it to be easy to integrate.
