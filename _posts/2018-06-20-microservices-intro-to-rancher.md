@@ -73,6 +73,8 @@ Typical cluster topology running containers on rancher stack:
 
 ![https://i.imgur.com/eL0PN2h.jpg](https://i.imgur.com/eL0PN2h.jpg)
 
+TL;DR, Rancher is good. Keeps things simple to make it easy to understand.
+
 ### References:
 1. [https://docs.docker.com/](https://docs.docker.com/)
 1. [https://rancher.com/docs/rancher/v1.6/en/rancher-services/](https://rancher.com/docs/rancher/v1.6/en/rancher-services/)
