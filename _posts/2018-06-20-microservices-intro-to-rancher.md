@@ -27,7 +27,7 @@ Medium of communication is an overhead sometimes compared to monolith - so, it w
 A microservice wants to have its own lifecycle(read: life of its own). It means it has freedom of programing language, freedom of deployment cycle. It wants to be easy to ship. (Thanks Docker!)
 
 ### What a microservice needs
-It needs to one thing but do well.
+It needs to do one thing but do it well.
 
 A service needs to be hosted. A stack where it can live! (apart from that, it also needs everything that is there for it to stay microservice; [they tend to be like monolith very fast](https://www.youtube.com/watch?v=X0tjziAQfNQ))
 
