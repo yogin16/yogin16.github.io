@@ -60,7 +60,9 @@ Containers can optionally have access of external storage through NFS drivers.
 Once it is Running it will receive traffic from service load balancer.
 Rancher provides support for container health-check. And it also manages the desired state of the service. Rancher takes care of managing networking for containers and between container and service.
 
-Typical cluster topology running containers on rancher stack: [https://i.imgur.com/eL0PN2h.jpg](https://i.imgur.com/eL0PN2h.jpg)
+Typical cluster topology running containers on rancher stack: 
+
+![https://i.imgur.com/eL0PN2h.jpg](https://i.imgur.com/eL0PN2h.jpg)
 
 ### References:
 1. [https://docs.docker.com/](https://docs.docker.com/)
