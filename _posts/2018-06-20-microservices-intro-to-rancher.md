@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "What a Microservice wants, What a Microservice needs; Understanding Rancher"
-date:       2018-04-10 01:02:58 +0530
+date:       2018-06-20 23:02:58 +0530
 comments:   true
 ---
 
@@ -42,25 +42,25 @@ In a nutshell, Rancher is abstraction over resource pool to distribute(and sched
 
 Rancher provides UI to manage the resources and deployment as well along with simple APIs to interact with rancher cluster.
 
-##### Host
+#### Host
 The unit of resource is host. A Linux machine (it can be virtual of physical machine).
 It provides: CPU, Memory, Network, Storage.
 
 Rancher can(read:will) run containers on the host to use these resources.
 
-##### Stack
+#### Stack
 Stack is where services are deployed. Serves two purposes:
 - Logical grouping of Hosts. One can configure the containers to be hosted on group of Hosts. (Affinity)
 - Stack of services. Running collection of microservices on a stack.
 
-##### Service
+#### Service
 Service is the microservice. It will have its own load balancer rule and a url to be accessed from.
 
 Service is collection of containers. All containers in a service runs a same Docker image. The multiple containers are for the scale of the service. The scale can be desired as will and needs. One service can have scale of 3 containers and other service can have scale of 1 container.
 
 Scaling: If we change the scale from 3 to 4 - Rancher will schedule a new container to any host from the stack and run the container image. This makes it super easy to horizontally scale the service. Service load balancer and HA proxy module of Rancher allows to easily upgrade services without downtime.
 
-##### Container
+#### Container
 Container is unit of work. Rancher manages container lifecycle. So, container has state; either of: Started, Initialising, Running, Killed, Stopped.
 
 Containers can optionally have access of external storage through NFS drivers.
