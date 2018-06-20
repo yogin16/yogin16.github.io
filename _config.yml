@@ -23,7 +23,7 @@ kramdown:
 highlighter:      rouge
 permalink:        pretty
 
-title: yogin16
+title: yogin's notes
 email: yogin.daiict@gmail.com
 description: > # hi, I am yogin patel. I work mostly on java.
 baseurl: "" # the subpath of your site, e.g. /blog
