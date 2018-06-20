@@ -29,7 +29,9 @@ A microservice wants to have its own lifecycle(read: life of its own). It means 
 It needs to one thing but do well.
 
 A service needs to be hosted. A stack where it can live! (apart from that, it also needs everything that is there for it to stay microservice; [they tend to be like monolith very fast](https://www.youtube.com/watch?v=X0tjziAQfNQ))
+
 Hosting comes with a price: it needs to have health checks(everybody needs a doctor), networking(to socialize), monitoring(to diagnose and early alerts), scaling(everybody needs to adapt), updating/deployments(everybody needs to grow)
+
 This note is about understanding [Rancher](https://rancher.com/); a container orchestrator platform to host and manage microservices deployments.
 
 ### Understanding Rancher
@@ -37,11 +39,13 @@ Rancher helps manage containers, helps manage microservices; helps manage micros
 
 #### Anatomy of Rancher
 In a nutshell, Rancher is abstraction over resource pool to distribute(and schedule) containers. Distribute them to run host agnostic but group them to form a microservice.
+
 Rancher provides UI to manage the resources and deployment as well along with simple APIs to interact with rancher cluster.
 
 ##### Host
 The unit of resource is host. A Linux machine (it can be virtual of physical machine).
 It provides: CPU, Memory, Network, Storage.
+
 Rancher can(read:will) run containers on the host to use these resources.
 
 ##### Stack
@@ -51,13 +55,17 @@ Stack is where services are deployed. Serves two purposes:
 
 ##### Service
 Service is the microservice. It will have its own load balancer rule and a url to be accessed from.
+
 Service is collection of containers. All containers in a service runs a same Docker image. The multiple containers are for the scale of the service. The scale can be desired as will and needs. One service can have scale of 3 containers and other service can have scale of 1 container.
+
 Scaling: If we change the scale from 3 to 4 - Rancher will schedule a new container to any host from the stack and run the container image. This makes it super easy to horizontally scale the service. Service load balancer and HA proxy module of Rancher allows to easily upgrade services without downtime.
 
 ##### Container
 Container is unit of work. Rancher manages container lifecycle. So, container has state; either of: Started, Initialising, Running, Killed, Stopped.
+
 Containers can optionally have access of external storage through NFS drivers.
 Once it is Running it will receive traffic from service load balancer.
+
 Rancher provides support for container health-check. And it also manages the desired state of the service. Rancher takes care of managing networking for containers and between container and service.
 
 Typical cluster topology running containers on rancher stack: 
