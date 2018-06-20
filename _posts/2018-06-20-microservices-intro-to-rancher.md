@@ -7,7 +7,7 @@ comments:   true
 
 With increasing adoption of [Docker](https://trends.google.com/trends/explore?date=all&q=docker) and its orchestrator platforms the microservices are good way to ship software where-ever applicable. Learning some bits about them which experimenting with Rancher.
 
-### Containers has their benefits
+### Containers have their benefits
 It is easy to understand why Docker adoption is high. It gives:
 - Isolation & consistency
 - Docker repository
@@ -15,7 +15,7 @@ It is easy to understand why Docker adoption is high. It gives:
 - Take a base image and build out a way from there
 - At the end, it is a just software we are shipping, it is computer resources we are using, it is services we are deploying(read: hosting). The app needs to customised and business specific; not deployment.
 
-### Microservices has their benefits (if we can ignore the cons)
+### Microservices have their benefits (if we can ignore the cons)
 - Scaling is replicating monolith if not microservice; so as far as this post is concerned, this is enough of a benefit to adapt microservices wherever we can; now that we have containers to ship them.
 
 ### What a microservice wants
@@ -39,22 +39,22 @@ Rancher helps manage containers, helps manage microservices; helps manage micros
 In a nutshell, Rancher is abstraction over resource pool to distribute(and schedule) containers. Distribute them to run host agnostic but group them to form a microservice.
 Rancher provides UI to manage the resources and deployment as well along with simple APIs to interact with rancher cluster.
 
-##### 1. Host
+##### Host
 The unit of resource is host. A Linux machine (it can be virtual of physical machine).
 It provides: CPU, Memory, Network, Storage.
 Rancher can(read:will) run containers on the host to use these resources.
 
-##### 1. Stack
+##### Stack
 Stack is where services are deployed. Serves two purposes:
 - Logical grouping of Hosts. One can configure the containers to be hosted on group of Hosts. (Affinity)
 - Stack of services. Running collection of microservices on a stack.
 
-##### 1. Service
+##### Service
 Service is the microservice. It will have its own load balancer rule and a url to be accessed from.
 Service is collection of containers. All containers in a service runs a same Docker image. The multiple containers are for the scale of the service. The scale can be desired as will and needs. One service can have scale of 3 containers and other service can have scale of 1 container.
 Scaling: If we change the scale from 3 to 4 - Rancher will schedule a new container to any host from the stack and run the container image. This makes it super easy to horizontally scale the service. Service load balancer and HA proxy module of Rancher allows to easily upgrade services without downtime.
 
-##### 1. Container
+##### Container
 Container is unit of work. Rancher manages container lifecycle. So, container has state; either of: Started, Initialising, Running, Killed, Stopped.
 Containers can optionally have access of external storage through NFS drivers.
 Once it is Running it will receive traffic from service load balancer.
