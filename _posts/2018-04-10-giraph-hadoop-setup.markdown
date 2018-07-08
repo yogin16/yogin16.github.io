@@ -62,7 +62,7 @@ hadoop-env.cmd             hdfs-site.xml              kms-acls.xml              
 Yogin-Patel:hadoop yoginpatel$
 ```
 
-##### Configure HDFS:
+#### Configure HDFS:
 Need to change file at: `hadoop/etc/hadoop/hdfs-site.xml` (we basically need to configure data directory)
 
 content from local for reference:
@@ -93,7 +93,7 @@ Yogin-Patel:hadoop yoginpatel$ cat hdfs-site.xml
 </configuration>
 ```
 
-##### Configure Yarn:
+#### Configure Yarn:
 Need to change file at: `hadoop/etc/hadoop/yarn-site.xml`
 
 content from my local setup: the limits are due to my local machine limitation - we need to allocate more memories in actual setup.
