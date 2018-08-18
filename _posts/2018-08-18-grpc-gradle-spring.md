@@ -8,7 +8,8 @@ comments:   true
 Notes on Microservice implementation in Java. Implementing example gRPC hello server with Spring and Gradle.
 
 ### gRPC
-The official website for [grpc](https://grpc.io/docs/guides/) really gives nice detailed introduction to what it is. With microservice architecture, the services will need to have communication with each other. And in distributed system gRPC enables to have seamless and faster integration with polyglot microservices. We just have to write _proto_ files and the language specific stubs for client and server implementations gets _generated_ automatically. Also gRPC uses HTTP/2 which is amazingly fast.
+The official website for [grpc](https://grpc.io/docs/guides/) really gives nice detailed introduction to what it is. With microservice architecture, the services will need to have communication with each other. And in distributed system gRPC enables to have seamless and faster integration with polyglot microservices. We just have to write _proto_ files and the language specific stubs for client and server implementations get _generated_ automatically. Also gRPC uses HTTP/2 which is amazingly fast.
+
 Assuming we already know what is the proto file following shows example of how we can use Gradle and Spring to quickly setup gRPC server in Java in minutes. (If needed to learn about protocol buffers: [google link](https://developers.google.com/protocol-buffers/docs/proto))
 
 ### hello.proto
