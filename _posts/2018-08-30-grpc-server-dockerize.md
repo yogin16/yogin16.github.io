@@ -12,15 +12,6 @@ This is part-2 for the Java microservice. Recap a it of [first part](https://yog
 - We have a hello world greeter service implemented in Java using gradle and spring
 - The greeter service would listen to gRPC requests
 
-### Docker
-We want to create Docker image for above service. As a common practice for container images, it should:
-- have a base image
-- have all java the dependencies while building the image
-- start the server on the docker run
-- have a tag for versioning the release
-
-We already used gradle for building proto and managing dependencies for Java server, we can use gradle in Docker image as well.
-
 ### Main method
 To execute Java main method via gradle we need to add a new task in our `build.gradle`:
 
@@ -32,7 +23,16 @@ task execute(type:JavaExec) {
 }
 ```
 
-### Dockerfile
+### Docker
+We want to create Docker image for above service. As a common practice for container images, it should:
+- have a base image
+- have all java the dependencies while building the image
+- start the server on the docker run
+- have a tag for versioning the release
+
+We already used gradle for building proto and managing dependencies for Java server, we can use gradle in Docker image as well.
+
+#### Dockerfile
 Above gradle task simplifies the Docker image:
 - using java:8 base image to get the Java JDK we would need
 - installing gradle in the image
