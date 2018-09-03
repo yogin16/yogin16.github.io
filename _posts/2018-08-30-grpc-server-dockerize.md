@@ -8,7 +8,7 @@ comments:   true
 Notes on Microservice implementation in Java. Creating Docker container for gRPC server. Following the recent trend to containerize the microservice server to make deployments easier using tools like Docker and Kubernetes.
 
 ### gRPC server
-This is part-2 for the Java microservice. Recap a it of [first part](https://yogin16.github.io/2018/08/18/grpc-gradle-spring/):
+This is part-2 for the Java microservice. Recap a bit of [first part](https://yogin16.github.io/2018/08/18/grpc-gradle-spring/):
 - We have a hello world greeter service implemented in Java using gradle and spring
 - The greeter service would listen to gRPC requests
 
