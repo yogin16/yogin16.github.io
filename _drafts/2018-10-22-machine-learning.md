@@ -23,14 +23,14 @@ We will go through the toy example of curve fitting problem for the introduction
 We want to learn the function _f(x)_ which maps the input _x_ to the output _y_. For simplicity in this example let _x_,_y_ from set of real number **R**.
 
 Let say we are given sample observations as follows:
-|-----|-----|
+
 |x|y=f(x)|
 |-----|-----|
 |1|21|
 |2|53|
 |3|101|
 |4|165|
-|-----|-----|
+
 
 Our goal is to lean the mapping of this function fitting above points as best we can. And once we learn that we would be able to predict _ŷ_ for any new input _x_.
 So, learning in this context means:
