@@ -24,7 +24,7 @@ We want to learn the function _f(x)_ which maps the input _x_ to the output _y_.
 
 Let say we are given sample observations as follows:
 
-|x|y=f(x)|
+|_x_|_y = f(x)_|
 |-----|-----|
 |1|21|
 |2|53|
