@@ -83,8 +83,7 @@ After this to find the parameters which minimises this error metric; we take der
 So from this approach we are able to get the co-officiants of the polynomial. And able to fit the data to the function. Once we learned these co-officiants we would also be able to predict output for new input.
 
 However, there are issues with this approach:
-- If you looked in the code snipped - at one point it had to compute matrix inverse in order to solve the linear algebra system.
-...That is computationally in-efficient and also not guaranteed to be possible in all cases. And becomes exponentially hard with more number of co-officiants.
+- If you looked in the code snipped - at one point it had to compute matrix inverse in order to solve the linear algebra system. That is computationally in-efficient and also not guaranteed to be possible in all cases. And becomes exponentially hard with more number of co-officiants.
 - We have figure out value of the order _j_.
 - Always assumes that the relationship of function is linear. (Which is ok, based on how we defined our curve fitting problem, but actually not all functions are having linear relationship - we want to remove this assumption now.)
 
