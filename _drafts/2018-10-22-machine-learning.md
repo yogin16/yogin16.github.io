@@ -89,4 +89,55 @@ However, there are issues with this approach:
 
 Lets try to approach above issues with two different approach in machine learning, applying to the same problem.
 
+### Solving with Gradient Descent
+
+We are going to derive inspiration of error from linear algebra. We want to minimize that error to fit our data points. But we assume that here, we have many data points available for our functions. So imagine that rather having only four points for the _(x,y)_ entry in the table we have say 10k of them from the same function. (This is the case for many real world example for machine learning tasks where we want to learn complex functions but have huge data set backing the mapping). However, we have to avoid matrix inverse operation.
+
+<Shubham script here of curve fitting>
+
+Ignore the parts you are not able to understand about underlying framework details - but notice following things:
+- it assume random initial states of the co-officiants
+- it looks at all the data points and computes the error
+- performs gradient optimization (compute derivatives) in the direction of minimizing the error
+- updates co-officiants with the learning rate
+- repeats this as manny time as needed until convergence
+
+Benefits of above approach:
+- In above code we have removed the constraint of order of the polynomial. The order _j_ is also learned.
+- The gradient technique is so powerful that we can change the mapping _y_ to other function of _x_ and it would still fit in that.
+- We could also make _y_ depend on more than one input params. So now our function could be accepting more that one _features_. (_x1_, _x2_, ... so on)
+
+#### What does it learn
+<explain learning here. plot loss vs iterations>
+
+Above algorithm is generic enough to work well with many different machine learning technique, And it is perfectly good technique to use in many real world problems!
+However there are still following improvements we could make:
+- We still have to define the mapping _y_ to some function of _x_ with co-officiants (_parameters_). (e.g., we defined _y_ to be polynomial of _x_ in above code)
+- Above step requires hand-engineering to perform feature analysis and put mapping with appropriate relations with dependent features. So called _feature engineering_.
+- The relationship of function is still linear combination of the input features.
+
+### Solving with Neural Network
+
+We make improvements to gradient optimization and use _neural network_, a generic framework build upon combining many _neurons_, an inspiration from how a human brain might learn anything. Any function we want to learn is the combination of many connected layers (deep) and each layers is set of neurons. Each neuron has an input and its own parameters whether to be _active_ on the input. That is why this technique is called deep learning.
+
+<Noman's script here of curve fitting>
+
+Benefits of above approach:
+- Notice here we are not specifying anything about function being polynomial. Function is just combination of neuron layers.
+- No feature engineering needed because it learns that.
+- Non-linearity is added in each neuron computation based on which a neuron decides to activate itself.
+- We can model complex functions with as many as millions of parameters to learn by increasing the number of layers and the number of neurons in each layer.
+
+#### What does it learn
+<explain learning here. plot loss vs iterations>
+
+Above code is generic enough that it does not consider any assumption of polynomial's order. In fact you can try creating a sample data from any other degree of polynomial and feed that in the network and it would learn the mapping for that fitting. (for higher order than 5 we need to make the the network deeper than just 2 layers maybe.) And it would be able to predict the correct value for the new input.
+
+However, how _big_ (number of layers and neurons) our network should be, for a given task becomes a tuning task. We have to experiment and judge. Along with this, there will be many _hyper-parameters_ we need to tune in case of deep-learning neural network. Interesting research is happening in this area to develop tools for hyperparameters tuning, and also model new neuron units for a specific task. (for e.g., _convolution_ neuron for image classification related tasks)
+
+### Why learning is feasible
+Interesting thinking is why above techniques actually work.
+
+### References:
 1. https://www.essie.ufl.edu/~kgurl/Classes/Lect3421/Fall_01/NM5_curve_f01.pdf
+1. https://www.wolframalpha.com
