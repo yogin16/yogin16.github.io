@@ -13,9 +13,9 @@ When I started learning and reading about machine learning I came across a defin
 I always struggled to understand "progressively improve performance on a specific task". Also, of course, there is programing involved. How is a computer algorithm be generic enough to "learn" from any data. What about the deterministic behaviour of computer algorithms?
 
 The goal of this article is to provide a little context on:
-- why machine learning works (e.g., why a machine learns)
 - how the modern machine learning algorithms have grown
 - why machine learning is a good technique for many different applications and domains
+- why machine learning works (e.g., why a machine learns)
 
 We will go through the toy example of curve fitting problem for the introduction to machine learning. We will first approach this using only algebra, the "old school" way, then we will solve it using machine learning with two different algorithms.
 
@@ -129,15 +129,58 @@ Benefits of above approach:
 - We can model complex functions with as many as millions of parameters to learn by increasing the number of layers and the number of neurons in each layer.
 
 #### What does it learn
+
 <explain learning here. plot loss vs iterations>
 
 Above code is generic enough that it does not consider any assumption of polynomial's order. In fact you can try creating a sample data from any other degree of polynomial and feed that in the network and it would learn the mapping for that fitting. (for higher order than 5 we need to make the the network deeper than just 2 layers maybe.) And it would be able to predict the correct value for the new input.
 
 However, how _big_ (number of layers and neurons) our network should be, for a given task becomes a tuning task. We have to experiment and judge. Along with this, there will be many _hyper-parameters_ we need to tune in case of deep-learning neural network. Interesting research is happening in this area to develop tools for hyperparameters tuning, and also model new neuron units for a specific task. (for e.g., _convolution_ neuron for image classification related tasks)
 
-### Why learning is feasible
-Interesting thinking is why above techniques actually work.
+### Why learning is feasible?
+
+Interesting thinking is why above techniques actually work. Learning is used when a. A pattern exists b. We can not pin it down mathematically c. We have data on it. The last part is essential. The learning problem explained above can be described (for all three cases) formally as follows:
+
+We have unknown target _y = f(x)_
+We have data set (_x1_, _y1_), (_x2_, _y2_), ... (_xN_, _yN_)
+Learning algorithm picks a function _g ~ f_ from the _hypothesis_ set _H_
+
+_Hopefully_ _g_ approximates _f_.
+
+The answer of this _hope_ is that learning is derived from a probabilistic situation.
+
+#### Theory of learning
+
+This is where probability would help.
+> In science and in engineering, you go a huge distance by settling for not absolutely certain, but almost certain. - Prof. Yaser Abu-Mostafa
+
+Let say you have a bin with infinite marbles. And a marble can be either _red_ of _green_.
+
+Hence picking up a marble randomly from the bin and it happening to be red has some probability.
+Let say that probability is _π_. Therefore, probability of marble being green is: _1 - π_.
+
+_π_ is unknown.
+
+Consider a sample of _N_ marbles picked from the bin. What does the fraction (_λ_) of red marbles in that samples, _in-sample frequency_, could tell you about the original probability _π_,_ out-sample frequency_? (say _p_ marbles are red and _N-p_ are green in the sample. => _λ=p/(N-p)_.)
+
+This is the analogy of our learning problem.
+
+One sample could not convey information about actual _π_ certainly. But many such samples and with bigger _N_ (large _N_), statistics tells us that, this fraction would likely be close to _π_ (within _ε_) with almost certainty. Why? Law of large numbers.
+
+[Hoeffding's inequality](https://www.wikiwand.com/en/Hoeffding%27s_inequality) provides an upper bound for probability being farther its expected value. (Formally, probability P[|_λ_-_π_| > _ε_] is bounded -  we can ignore the mathematics machinery of Hoeffding's for this post)
+Which in our case would state that _λ_ = _π_ is _probably approximately correct_.
+
+Lets add probability to your input sample data. The sample data set _came from distribution_, whether you like it or not.
+There exists is a probability distribution of picking one point vs another of the input space of the unknown target function (_x1_, _x2_, ...)
+Let it be any distribution so any probability for picking a point _x_. (Because the Hoeffding bound, which is a negative exponential of _ε_, does not depend on _λ_ or _π_.)
+But if we add this assumption our learning problem's algorithms error is bounded by Hoeffding's inequality.
+
+_That is saying that the in-sample frequency can model the out-sample frequency. This where are generalizing the learning._
+That means learning from the sample of the data set, we _can_ generalize the learning of function for whole input data space.
+
+This by no means conveys that all learned model from in-sample data set is generic enough for out-sample data, there are still many problems we have to deal with like, overfit, underfit, exploding gradients, etc. But it conveys that it is feasible.
 
 ### References:
 1. https://www.essie.ufl.edu/~kgurl/Classes/Lect3421/Fall_01/NM5_curve_f01.pdf
 1. https://www.wolframalpha.com
+1. https://www.youtube.com/watch?v=MEG35RDD7RA
+1. https://www.wikiwand.com/en/Hoeffding%27s_inequality
