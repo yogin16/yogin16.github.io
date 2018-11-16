@@ -131,7 +131,7 @@ However there are still following improvements we could make:
 
 We make improvements to gradient optimization and use _neural network_, a generic framework build upon combining many _neurons_, an inspiration from how a human brain might learn anything. Any function we want to learn is the combination of many connected layers (deep) and each layers is set of neurons. Each neuron has an input and its own parameters whether to be _active_ on the input. That is why this technique is called deep learning.
 
-:Noman's script here of curve fitting:
+<script src="https://gist.github.com/nomanahmedsheikh/e768067fc962e81032b8d81c7d23d58d.js"></script>
 
 Benefits of above approach:
 
@@ -204,6 +204,9 @@ _That is saying that the in-sample frequency can model the out-sample frequency.
 That means learning from the sample of the data set, we _can_ generalize the learning of function for whole input data space.
 
 This by no means conveys that all learned model from in-sample data set is generic enough for out-sample data, there are still many problems we have to deal with like, overfit, underfit, exploding gradients, etc. But it conveys that it is feasible.
+
+### Acknowledgement
+Thanks to [Noman](https://github.com/nomanahmedsheikh) and Shubham for providing above solutions.
 
 
 ### References:
