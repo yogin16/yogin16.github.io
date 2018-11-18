@@ -5,13 +5,13 @@ date:       2018-10-20 08:10:58 +0530
 comments:   true
 ---
 
-Machine Learning is tough if you haven't been there from beginning because the ecosystem is rapidly developing and growing. In a world with access to a lot of data and a lot of compute power, Machine Learning, an idea to teach machine from examples and experience - without being explicitly programmed, perfectly makes sense.
+Machine Learning is tough if you haven't been there from the beginning because the ecosystem is rapidly developing and growing. In a world with access to a lot of data and a lot of compute, Machine Learning, an idea to teach machine from examples and experience - without being explicitly programmed, perfectly makes sense.
 
-When I started learning and reading about machine learning I came across a definition:
+When I started learning and reading about machine learning I came across this definition:
 
 > Machine learning is a field of artificial intelligence that uses statistical techniques to give computer systems the ability to "learn" (e.g., progressively improve performance on a specific task) from data, without being explicitly programmed.
 
-I always struggled to understand "progressively improve performance on a specific task". Also, of course, there is programing involved. How is a computer algorithm be generic enough to "learn" from any data. What about the deterministic behaviour of computer algorithms?
+I always struggled to understand "progressively improve performance on a specific task". Also, of course, there is some programing involved. How can a computer algorithm be generic enough to "learn" from any data. What about the deterministic behaviour of computer algorithms?
 
 The goal of this article is to provide a little context on:
 
@@ -19,14 +19,14 @@ The goal of this article is to provide a little context on:
 - why machine learning is a good technique for many different applications and domains
 - why machine learning works (e.g., why a machine learns)
 
-We will go through the toy example of curve fitting problem for the introduction to machine learning. We will first approach this using only algebra, the "old school" way, then we will solve it using machine learning with two different algorithms.
+For this introduction to machine learning, We will go through a toy example of curve fitting problem. We will first approach this problem using elementary algebra, the "old school" way, then we will solve it using machine learning with two different algorithms.
 
 
 ## Curve Fitting
 
-We want to learn the function _f(x)_ which maps the input _x_ to the output _y_. For simplicity in this example let _x_,_y_ from set of real number **R**.
+We want to learn a function _f(x)_ which maps the input _x_ to the output _y_. For simplicity in this example let _x_,_y_ belong to the set of real number **R**.
 
-Let say we are given sample observations as follows:
+Lets say we are given sample observations as follows:
 
 |_x_|_y = f(x)_|
 |-----|-----|
@@ -36,21 +36,21 @@ Let say we are given sample observations as follows:
 |4|165|
 
 
-Our goal is to lean the mapping of this function fitting above points as best we can. Once we learn that we would be able to predict _ŷ_ for any new input _x_.
+Our goal is to learn a function that maps points as best as possible. Once we learn this function we would be able to predict _ŷ_ for any new input _x_.
 
 Learning in this context means:
 
 - to be able to fit the data to find relationships with various inputs
 - to be able to predict output for new input value
 
-If it was a step function like mapping, we could learn what is the best threshold value to always be on one side of the function. Predicting output for a given input is a powerful tool, because we can apply that to many functions in different applications.
+If this mapping was similar to the step function like mapping, we could learn what is the best threshold value to always be on one side of the function output. Predicting output for a given input is a powerful tool, because we can apply that to many functions in different applications.
 
-Of course, here we assumed that the function accepts single real number as an input and produces a single real number output. (We will discuss about this later.)
+Of course, here we assumed that the function accepts single real number input and produces a single real number output. (We will discuss about this later.)
 
 
 ## Solving with Algebra
 
-The method below is described from an online lecture. For more info you can check [here](https://www.essie.ufl.edu/~kgurl/Classes/Lect3421/Fall_01/NM5_curve_f01.pdf)
+The method below is described from an online lecture. For more information you can check [here](https://www.essie.ufl.edu/~kgurl/Classes/Lect3421/Fall_01/NM5_curve_f01.pdf)
 
 Let's assume that the function _f(x)_ is a polynomial of degree _j_:
 
@@ -63,24 +63,24 @@ Let's plot the data points we have:
 
 ![points]({{ site.url }}assets/images/bare-points.png)
 
-When we try to fit these with line: we want to know the function of line which would look like this:
+When we try to fit these points with a line: we want to know the function that represents a line which would look like this:
 
 ![1st-order-curve]({{ site.url }}assets/images/1st-order-curve.png)
 
-Because these are only 4 data points we get the feeling that the data is linear and we may be able to fit in the first order polynomial. But in fact the data is generated from the second order function. Original points belonged to the [equation](https://www.wolframalpha.com/input/?i=8*x%5E2+%2B+8*x+%2B+5) _y = 8*x^2 + 8*x + 5_
+Because these are only 4 data points we get a feeling that the data is linear and we may be able to fit in the first order polynomial. But in fact the data is generated from the second order function. Original points belonged to the [equation](https://www.wolframalpha.com/input/?i=8*x%5E2+%2B+8*x+%2B+5) _y = 8*x^2 + 8*x + 5_
 
 So these would fit nicely when we try to with to second order polynomial:
 
 ![2nd-order-curve]({{ site.url }}assets/images/2nd-order-curve.png)
 
 
-We can compute the function based on the formula of least squared approach - and minimize that function with respect to the co-officiants we want to find to best "fit" our data points.
+We can compute the function based on the formula of least squared approach - and minimize that function with respect to the coefficients we want to find to best "fit" our data points.
 
 ![solution]({{ site.url }}assets/images/solution.png)
 
-If last part is complex then ignore - it just sums up one metric about the function we know from all the data points we have. That computed metric is known as the error. (In this particular case computed using sum of squared of differences.)
+If last part is complex then ignore - it just sums up one metric about the function we know from all the data points we have. That computed metric is known as the error. (In this particular case error is computed using sum of squared of differences.)
 
-After this to find the parameters which minimises this error metric; we take derivatives of error with respect to the co-efficient. We can put those derivative equations in matrix and solve using linear algebra. The code for this looks like below:
+After this to find the parameters which minimises this error metric; we take derivatives of error with respect to the coefficients. We can put those derivative equations in matrix and solve using linear algebra. The code for this looks like below:
 
 <script src="https://gist.github.com/yogin16/3582b476210cfcf732e6d4f8985d18fe.js"></script>
 
@@ -88,7 +88,7 @@ So from this approach we are able to get the co-officiants of the polynomial. An
 
 However, there are issues with this approach:
 
-- If you looked in the code snipped - at one point it had to compute matrix inverse in order to solve the linear algebra system. That is computationally in-efficient and also not guaranteed to be possible in all cases. And becomes exponentially hard with more number of co-officiants.
+- If you looked in the code snippet - at one point it had to compute matrix inverse in order to solve the linear algebra system. That is computationally in-efficient and also not guaranteed to be possible in all cases. And becomes non-trivial with more number of co-officiants.
 - We have figure out value of the order _j_.
 - Always assumes that the relationship of function is linear. (Which is ok, based on how we defined our curve fitting problem, but actually not all functions are having linear relationship - we want to remove this assumption now.)
 
@@ -111,7 +111,7 @@ Ignore the parts you are not able to understand about underlying framework detai
 
 Benefits of above approach:
 
-- In above code we have removed the constraint of order of the polynomial. The order _j_ is also learned.
+- In above code we have removed the constraint on order of the polynomial. The order _j_ is also learned.
 - The gradient technique is so powerful that we can change the mapping _y_ to other function of _x_ and it would still fit in that.
 - We could also make _y_ depend on more than one input params. So now our function could be accepting more that one _features_. (_x1_, _x2_, ... so on)
 
@@ -129,7 +129,7 @@ However there are still following improvements we could make:
 
 ## Solving with Neural Network
 
-We make improvements to gradient optimization and use _neural network_, a generic framework build upon combining many _neurons_, an inspiration from how a human brain might learn anything. Any function we want to learn is the combination of many connected layers (deep) and each layers is set of neurons. Each neuron has an input and its own parameters whether to be _active_ on the input. That is why this technique is called deep learning.
+We make improvements to gradient optimization and use _neural network_, a generic framework build upon combining many _neurons_, an inspiration from how a human brain might learn anything. Any function we want to learn is the combination of many connected layers (deep) and each layers is set of neurons. Each neuron has an input and its own parameters governing whether to be _active_ on the input. That is why this technique is called deep learning.
 
 <script src="https://gist.github.com/nomanahmedsheikh/e768067fc962e81032b8d81c7d23d58d.js"></script>
 
@@ -147,7 +147,7 @@ Benefits of above approach:
 
 Above code is generic enough that it does not consider any assumption of polynomial's order. In fact you can try creating a sample data from any other degree of polynomial and feed that in the network and it would learn the mapping for that fitting. (for higher order than 5 we need to make the the network deeper than just 2 layers maybe.) And it would be able to predict the correct value for the new input.
 
-However, how _big_ (number of layers and neurons) our network should be, for a given task becomes a tuning task. We have to experiment and judge. Along with this, there will be many _hyper-parameters_ we need to tune in case of deep-learning neural network. Interesting research is happening in this area to develop tools for hyperparameters tuning, and also model new neuron units for a specific task. (for e.g., _convolution_ neuron for image classification related tasks)
+However, how _big_ (number of layers and neurons) our network should be, for a given problem becomes a tuning task. We have to experiment and judge. Along with this, there will be many _hyper-parameters_ we need to tune in case of deep-learning neural network. Interesting research is happening in this area to develop tools for hyperparameters tuning, and also model new neuron units for a specific task. (for e.g., _convolution_ neuron for image classification related tasks)
 
 
 ## Why learning is feasible?
@@ -199,7 +199,7 @@ Which in our case would state that _λ_ = _π_ is _probably approximately correc
 - But if we add this assumption our learning problem's algorithms error is bounded by Hoeffding's inequality.
 
 
-_That is saying that the in-sample frequency can model the out-sample frequency. This where are generalizing the learning._
+_That is saying that the in-sample frequency can model the out-sample frequency. This is where we are generalizing the learning._
 
 That means learning from the sample of the data set, we _can_ generalize the learning of function for whole input data space.
 
