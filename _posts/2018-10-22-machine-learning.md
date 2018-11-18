@@ -11,7 +11,7 @@ When I started learning and reading about machine learning I came across this de
 
 > Machine learning is a field of artificial intelligence that uses statistical techniques to give computer systems the ability to "learn" (e.g., progressively improve performance on a specific task) from data, without being explicitly programmed.
 
-I always struggled to understand "progressively improve performance on a specific task". Also, of course, there is some programing involved. How can a computer algorithm be generic enough to "learn" from any data. What about the deterministic behaviour of computer algorithms?
+I always struggled to understand "progressively improve performance on a specific task". Of course, there is some programing involved. How can a computer algorithm be generic enough to "learn" from any data. What about the deterministic behaviour of computer algorithms?
 
 The goal of this article is to provide a little context on:
 
@@ -80,34 +80,34 @@ We can compute the function based on the formula of least squared approach - and
 
 If last part is complex then ignore - it just sums up one metric about the function we know from all the data points we have. That computed metric is known as the error. (In this particular case error is computed using sum of squared of differences.)
 
-After this to find the parameters which minimises this error metric; we take derivatives of error with respect to the coefficients. We can put those derivative equations in matrix and solve using linear algebra. The code for this looks like below:
+After this to find the parameters(coefficients) _which minimises this error metric_; we take derivatives of error with respect to the coefficients. (minimum error => derivative is zero.) We can put those derivative equations in matrix and solve using linear algebra. The code for this looks like below:
 
 <script src="https://gist.github.com/yogin16/3582b476210cfcf732e6d4f8985d18fe.js"></script>
 
-So from this approach we are able to get the co-officiants of the polynomial. And able to fit the data to the function. Once we learned these co-officiants we would also be able to predict output for new input.
+From this approach we are able to get the coefficients of the polynomial. And able to fit the data to the function. Once we learned these coefficients we would also be able to predict output for new input.
 
 However, there are issues with this approach:
 
-- If you looked in the code snippet - at one point it had to compute matrix inverse in order to solve the linear algebra system. That is computationally in-efficient and also not guaranteed to be possible in all cases. And becomes non-trivial with more number of co-officiants.
+- If you looked in the code snippet - at one point it had to compute matrix inverse in order to solve the linear algebra system. That is computationally in-efficient and also not guaranteed to be possible in all cases. And becomes non-trivial with more number of coefficients.
 - We have figure out value of the order _j_.
 - Always assumes that the relationship of function is linear. (Which is ok, based on how we defined our curve fitting problem, but actually not all functions are having linear relationship - we want to remove this assumption now.)
 
 Lets try to approach above issues with two different approach in machine learning, applying to the same problem.
 
 
-## Solving with Gradient Descent
+## Solving with Gradient Descent Optimizer
 
-We are going to derive inspiration of error from linear algebra. We want to minimize that error to fit our data points. But we assume that here, we have many data points available for our functions. So imagine that rather having only four points for the _(x,y)_ entry in the table we have say 10k of them from the same function. (This is the case for many real world example for machine learning tasks where we want to learn complex functions but have huge data set backing the mapping). However, we have to avoid matrix inverse operation.
+We are going to derive inspiration of error from linear algebra. We want to minimize that error to fit our data points. But we assume that here, we have many data points available for our functions. So imagine that rather having only four points for the _(x,y)_ entry in the table we have say 10k of them from the same function. (This is the case for many real world example for machine learning tasks where we want to learn complex functions but have huge data set backing the mapping). However, we want to avoid matrix inverse operation.
 
 :Shubham script here of curve fitting:
 
 Ignore the parts you are not able to understand about underlying framework details - but notice following things:
 
-- it assume random initial states of the co-officiants
+- it assume random initial states of the coefficients
 - it looks at all the data points and computes the error
 - performs gradient optimization (compute derivatives) in the direction of minimizing the error
-- updates co-officiants with the learning rate
-- repeats this as manny time as needed until convergence
+- updates coefficients with the learning rate
+- repeats this as many time as needed until convergence
 
 Benefits of above approach:
 
@@ -122,14 +122,14 @@ Benefits of above approach:
 
 Above algorithm is generic enough to work well with many different machine learning technique, And it is perfectly good technique to use in many real world problems!
 However there are still following improvements we could make:
-- We still have to define the mapping _y_ to some function of _x_ with co-officiants (_parameters_). (e.g., we defined _y_ to be polynomial of _x_ in above code)
+- We still have to define the mapping _y_ to some function of _x_ with coefficients (_parameters_). (e.g., we defined _y_ to be polynomial of _x_ in above code)
 - Above step requires hand-engineering to perform feature analysis and put mapping with appropriate relations with dependent features. So called _feature engineering_.
 - The relationship of function is still linear combination of the input features.
 
 
 ## Solving with Neural Network
 
-We make improvements to gradient optimization and use _neural network_, a generic framework build upon combining many _neurons_, an inspiration from how a human brain might learn anything. Any function we want to learn is the combination of many connected layers (deep) and each layers is set of neurons. Each neuron has an input and its own parameters governing whether to be _active_ on the input. That is why this technique is called deep learning.
+We make improvements to gradient optimization and use _neural network_, a generic framework build upon combining many _neurons_, an inspiration from how a human brain might learn anything. Any function we want to learn is the combination of many connected layers (deep) and each layers is set of neurons. That is why this technique is called deep learning. Each neuron has an input and its own parameters governing whether to be _active_ on the input.
 
 <script src="https://gist.github.com/nomanahmedsheikh/e768067fc962e81032b8d81c7d23d58d.js"></script>
 
