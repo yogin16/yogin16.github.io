@@ -7,6 +7,8 @@ comments:   true
 
 Machine Learning is tough if you haven't been there from the beginning because the ecosystem is rapidly developing and growing. In a world with access to a lot of data and a lot of compute, Machine Learning, an idea to teach machine from examples and experience - without being explicitly programmed, perfectly makes sense.
 
+_This is in a draft version._
+
 When I started learning and reading about machine learning I came across this definition:
 
 > Machine learning is a field of artificial intelligence that uses statistical techniques to give computer systems the ability to "learn" (e.g., progressively improve performance on a specific task) from data, without being explicitly programmed.
@@ -99,7 +101,7 @@ Lets try to approach above issues with two different approach in machine learnin
 
 We are going to derive inspiration of error from linear algebra. We want to minimize that error to fit our data points. But we assume that here, we have many data points available for our functions. So imagine that rather having only four points for the _(x,y)_ entry in the table we have say 10k of them from the same function. (This is the case for many real world example for machine learning tasks where we want to learn complex functions but have huge data set backing the mapping). However, we want to avoid matrix inverse operation.
 
-:Shubham script here of curve fitting:
+<script src="https://gist.github.com/shubham-sharma-ai/bdfe966820acc758b38c29284e2edb0c.js"></script>
 
 Ignore the parts you are not able to understand about underlying framework details - but notice following things:
 
@@ -118,7 +120,11 @@ Benefits of above approach:
 
 ### What does it learn
 
-:explain learning here. plot loss vs iterations:
+This is the loss per iterations of the training:
+
+![tf-loss-plot]({{ site.url }}assets/images/tf-loss-plot.png)
+
+After 17335 Iterations it learns that the Equation is: _y = 8.001574x^1.9997478723526 + 7.998249530792236x + 5.0001220703125_.
 
 Above algorithm is generic enough to work well with many different machine learning technique, And it is perfectly good technique to use in many real world problems!
 However there are still following improvements we could make:
@@ -143,7 +149,9 @@ Benefits of above approach:
 
 ### What does it learn
 
-:explain learning here. plot loss vs iterations:
+This is the loss per iterations of the training:
+
+![nn-loss-plot]({{ site.url }}assets/images/nn-loss-plot.png)
 
 Above code is generic enough that it does not consider any assumption of polynomial's order. In fact you can try creating a sample data from any other degree of polynomial and feed that in the network and it would learn the mapping for that fitting. (for higher order than 5 we need to make the the network deeper than just 2 layers maybe.) And it would be able to predict the correct value for the new input.
 
@@ -206,11 +214,13 @@ That means learning from the sample of the data set, we _can_ generalize the lea
 This by no means conveys that all learned model from in-sample data set is generic enough for out-sample data, there are still many problems we have to deal with like, overfit, underfit, exploding gradients, etc. But it conveys that it is feasible.
 
 ### Acknowledgement
-Thanks to [Noman](https://github.com/nomanahmedsheikh) and Shubham for providing above solutions.
+Thanks to [Noman](https://github.com/nomanahmedsheikh) and [Shubham](https://github.com/shubham-sharma-ai) for providing their solutions of curve fitting scripts.
 
 
 ### References:
-1. https://www.essie.ufl.edu/~kgurl/Classes/Lect3421/Fall_01/NM5_curve_f01.pdf
-1. https://www.wolframalpha.com
-1. https://www.youtube.com/watch?v=MEG35RDD7RA
-1. https://www.wikiwand.com/en/Hoeffding%27s_inequality
+1. [https://www.essie.ufl.edu/~kgurl/Classes/Lect3421/Fall_01/NM5_curve_f01.pdf](https://www.essie.ufl.edu/~kgurl/Classes/Lect3421/Fall_01/NM5_curve_f01.pdf)
+1. [https://www.wolframalpha.com](https://www.wolframalpha.com)
+1. [https://www.youtube.com/watch?v=MEG35RDD7RA](https://www.youtube.com/watch?v=MEG35RDD7RA)
+1. [https://www.wikiwand.com/en/Hoeffding%27s_inequality](https://www.wikiwand.com/en/Hoeffding%27s_inequality)
+1. [https://gist.github.com/shubham-sharma-ai/bdfe966820acc758b38c29284e2edb0c](https://gist.github.com/shubham-sharma-ai/bdfe966820acc758b38c29284e2edb0c)
+1. [https://gist.github.com/nomanahmedsheikh/e768067fc962e81032b8d81c7d23d58d](https://gist.github.com/nomanahmedsheikh/e768067fc962e81032b8d81c7d23d58d)
