@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "About modeling conversations using neural networks"
+title:      "About Modeling Conversations using Neural Networks"
 date:       2019-11-09 07:28:58 +0530
 comments:   true
 ---
