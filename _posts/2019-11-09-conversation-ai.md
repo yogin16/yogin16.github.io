@@ -5,6 +5,7 @@ date:       2019-11-09 07:28:58 +0530
 comments:   true
 ---
 Recently there has been a great push in AI for seq2seq models. You might associate these language models for the use of neural machine translation (NMT) & innovations for other language generation tasks like chatbots. But NMT and chatbots actually fall into the opposite spectrum of natural language generation tasks:
+
 ![spectrum]({{ site.url }}assets/images/spectrum.png)
 
 Are you trying to use seq2seq models for dialogue systems? i.e., encoder-decoder networks for chatbots/conversational AI? You need to be aware of the following nuances of natural language understanding before using the same networks to achieve your tasks which were originally meant to be used for machine translation.
