@@ -41,9 +41,9 @@ Yogin Patel
 # Skill & Technologies
 - **Languages**: Python, Java, JavaScript, Erlang
 - **Machine Learning**: TensorFlow, Keras, PyTorch, SpaCy, scikit-learn, TFX, MLFlow
-- Comfortable with UNIX operating systems and basic System Administration, with experience in tools and providers like AWS, Ansible, Jenkins
 - **Infra**: Docker, Kubernetes, Istio
 - **Distributed Systems**: Mesos, Qrtz, Kafka, emqttd, Docker, ngnix
 - **Web**: node.js, Git, Glassfish
 - **Databases** and **Search Engines**: Mongo, ES, Solr, MySQL, Redis
 - **Frameworks** and **Libraries**: Spring, Guava, Gradle
+- Comfortable with UNIX operating systems and basic System Administration, with experience in tools and providers like AWS, Ansible, Jenkins
