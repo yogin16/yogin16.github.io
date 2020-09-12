@@ -42,7 +42,7 @@ Yogin Patel
 - **Languages**: Python, Java, JavaScript, Erlang
 - **Machine Learning**: TensorFlow, Keras, PyTorch, SpaCy, scikit-learn, TFX, MLFlow
 - **Infra**: Docker, Kubernetes, Istio
-- **Distributed Systems**: Mesos, Qrtz, Kafka, emqttd, Docker, ngnix
+- **Distributed Systems**: Spark, Mesos, Qrtz, Kafka, emqttd, Docker, ngnix
 - **Web**: node.js, Git, Glassfish
 - **Databases** and **Search Engines**: Mongo, ES, Solr, MySQL, Redis
 - **Frameworks** and **Libraries**: Spring, Guava, Gradle
