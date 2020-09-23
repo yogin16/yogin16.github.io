@@ -57,7 +57,7 @@ This analyzer works well when you have search on something like `username` - whe
 #### analyze test index1
 ```bash
 curl -XPOST localhost:9200/test_ngram_1/_analyze -d '{
-    "analyzer": "spr_ngram",
+    "analyzer": "customNgram",
     "text": "Quick Fox"
 }'
 ```
@@ -149,7 +149,7 @@ Now, our tokenizer is not ngram. our tokenizer is `whitespace`. The `ngram` is p
 
 ```bash
 curl -XPOST localhost:9200/test_ngram_2/_analyze -d '{
-    "analyzer": "spr_ngram",
+    "analyzer": "customNgram",
     "text": "Quick Fox"
 }'
 ```
