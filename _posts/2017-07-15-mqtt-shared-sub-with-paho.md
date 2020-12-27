@@ -4,7 +4,7 @@ title:      "MQTT shared subscriptions with Paho"
 date:       2017-07-15 11:43:58 +0530
 comments:   true
 ---
-Shared subscriptions are great way to [load balance](http://www.hivemq.com/blog/mqtt-client-load-balancing-with-shared-subscriptions/) the client listeners for MQTT's subscribers. However the [Erlang's MQTT broker](http://emqtt.io/docs/v2/advanced.html) supports shared subscriptions; since it is not outlined in MQTT 3.1.1 specification, Paho client doesn't comply with shared subscription format.
+Shared subscriptions are great way to [load balance](http://www.hivemq.com/blog/mqtt-client-load-balancing-with-shared-subscriptions/) the client listeners for MQTT's subscribers. However the [Erlang's MQTT broker](http://emqtt.io/docs/v2/advanced.html) supports shared subscriptions; since it is not outlined in MQTT 3.1.1 specification, Paho client doesn't comply with shared subscription format. This blog deals with Paho's limitation.
 
 Paho is famous client for MQTT, we used that to deploy our chat application to connect with EMQ broker. But Paho's client doesn't work with shared topic subscriptions. [https://github.com/eclipse/paho.mqtt.java/issues/367](https://github.com/eclipse/paho.mqtt.java/issues/367) . There are many MQTT brokers which supports shared subscription of their flavour. MQTTv5 would include shared subscriptions and Paho client would support them in Java client v5. But the 3.1.1 client we needed to add custom router.
 
