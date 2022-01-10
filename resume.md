@@ -10,7 +10,7 @@ Yogin Patel
 
 
 # Overview
-- 6+ years of experience on real-world software application and machine learning for social media, with millions of lines of code and teams with global presence.
+- 8+ years of experience on real-world software application and machine learning for social media, with millions of lines of code and teams with global presence.
 - Continuously using expertise for developing, debugging, monitoring & testing world-class software applications and machine learning micro-services involving concurrency, memory management, networking, storage.
 - Interested in machine learning, operating systems, programing models, open source
 
