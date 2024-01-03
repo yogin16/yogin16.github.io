@@ -188,7 +188,7 @@ MqttClient client = new MqttClient();
     client.subscribe(sharedTopic); //Subscribe all via listeners.keySet()
 ```
 
-More details & source code for `SharedSubCallbackRouter` available on [https://github.com/yogin16/paho-shared-sub-example](http://www.hivemq.com/blog/mqtt-client-load-balancing-with-shared-subscriptions/)
+More details & source code for `SharedSubCallbackRouter` available on [https://github.com/yogin16/paho-shared-sub-example](https://github.com/yogin16/paho-shared-sub-example)
 
 ### References:
 1. [http://www.hivemq.com/blog/mqtt-client-load-balancing-with-shared-subscriptions/](http://www.hivemq.com/blog/mqtt-client-load-balancing-with-shared-subscriptions/)
